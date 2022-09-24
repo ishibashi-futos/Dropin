@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink } from 'vue-router'
 defineProps({
   msg: {
     type: String,
@@ -9,7 +10,7 @@ defineProps({
 
 <template>
   <nav class="headerNav">
-    <div class="item">ホーム</div>
+    <router-link class="item" to="/">ホーム</router-link>
     <div class="item">ご予約</div>
     <div class="item">オーナー</div>
     <div class="item">お知らせ</div>

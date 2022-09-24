@@ -1,19 +1,13 @@
 <script setup>
 import { RouterLink } from 'vue-router'
-defineProps({
-  msg: {
-    type: String,
-    required: true
-  }
-})
 </script>
 
 <template>
-  <nav class="headerNav">
-    <router-link class="item" to="/">ホーム</router-link>
-    <div class="item">ご予約</div>
-    <div class="item">オーナー</div>
-    <div class="item">お知らせ</div>
+  <nav class="headerNav shadow-2xl">
+    <router-link class="item text-slate-700 font-bold" to="/">ホーム</router-link>
+    <div class="item text-slate-700 font-bold">ご予約</div>
+    <div class="item text-slate-700 font-bold">オーナー</div>
+    <router-link class="item text-slate-700 font-bold" to="/news">おしらせ</router-link>
   </nav>
 </template>
 

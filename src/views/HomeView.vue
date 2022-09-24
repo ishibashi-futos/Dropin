@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import Api from '../api/api.js'
+import NewsList from '../components/NewsList.vue'
 
 const features = ref([
   { 
@@ -70,12 +71,7 @@ Api.fetchNews().then((data) => {
         開発用の作業ルームで作業するもよし、宿泊ルームで作業するもよし。
         宿泊利用は1日1組様のためオンラインミーティングも可能です。(モニタやWiFiもご自由にご利用ください。）
       </p>
-      <div>
-        <h2 class="text-center text-xl font-bold py-16">お知らせ</h2>
-        <router-link v-for="n in news" :key="n.id" :to="`/news/${n.id}`">
-          <p>{{ n.title }}</p>
-        </router-link>
-      </div>
+
       <ul class="md:flex mt-20">
         <li v-for="(feature, index) in features" :key="index" 
           class="px-12 mt-12 sm:px-20 md:mt-0 md:flex-1 md:px-1">
@@ -105,6 +101,10 @@ Api.fetchNews().then((data) => {
         </ul>
       </div>
     </section>
+    <div class="section">
+      <h2 class="text-center text-xl font-bold py-16">お知らせ</h2>
+      <NewsList :newsList="news" />
+    </div>
   </main>
 </template>
 

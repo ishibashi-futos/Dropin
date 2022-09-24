@@ -25,7 +25,7 @@ defineProps({
   width: 100%;
   height: 50px;
   z-index: 50;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, .7);
   .item {
     padding: 0 20px;
     display: flex;

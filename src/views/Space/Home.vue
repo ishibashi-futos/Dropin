@@ -21,15 +21,18 @@ const examples = ref([
 const whatWeCanDo = ref([
   { 
     title: "やりたいこと応援",
-    content: "やってみたいことがあれば全力でお手伝いしたり一緒にやったりします！（コスプレ衣装つくりたいとか、コンサートやりたいとか、絵を描きたいとか、アプリ作りたいとかなんでも！）"
+    imageUrl: 'src/assets/images/main/squid.png',
+    content: "やってみたいことがあれば全力でお手伝いしたり一緒にやったりします！（マンガ描きたいとか、筋トレしたいとかなんでも！）"
   },
   { 
     title: "もくもく作業OK",
+    imageUrl: 'src/assets/images/main/alpa.png',
     content: "勉強・読書・ゲームなどひたすらやってたい！という方もどうぞ好きなだけどうぞ！（本やゲームはご自身のものをお持ちください）"
   },
   { 
     title: "プログラミング学習",
-    content: "プログラミング学習アプリを無料で学習できます。運営者はエンジニアなのでおお手伝いできます。"
+    imageUrl: 'src/assets/images/main/white_bear.png',
+    content: "プログラミング学習サービスを使って、無料で学習できます。運営者はデザインと開発を仕事にしているのでアプリ開発のお手伝いできます。"
   },
 ])
 
@@ -82,11 +85,11 @@ Api.fetchNews().then((data) => {
       <h2 class="font-pixel text-slate-500 text-4xl text-center">CONCEPT</h2>
       <p class="text-base text-slate-500　text-center">何のための場所なの？</p>
       <div class="mt-12">
-        <p>刹那的な意味ではなく、今楽しいことが一番大事。</p>
-        <p>なんのために学校に行くのか？それは将来のために今我慢して、将来幸せになろう！という側面があると思います。</p>
-        <p>でも将来の幸せって、なんだかわからないままのひとが多いはず。</p>
-        <p>そのよくわからない将来の幸せのために、今を犠牲にするのって結構リスキーかもしれない。</p>
-        <p>
+        <p class="pt-3">刹那的な意味ではなく、今楽しいことが一番大事。</p>
+        <p class="pt-3">なんのために学校に行くのか？それは将来のために今我慢して、将来幸せになろう！という側面があると思います。</p>
+        <p class="pt-3">でも将来の幸せって、なんだかわからないままのひとが多いはず。</p>
+        <p class="pt-3">そのよくわからない将来の幸せのために、今を犠牲にするのって結構リスキーかもしれない。</p>
+        <p class="pt-3">
           今楽しいと思うことをやって、「私ってこういう時に幸せを感じるんだな」ってわかれば、その幸せ時間を作るための努力はきっと楽しくなるはず。
           そして人生の中の多くの時間が「楽しい」時間になるのが幸せってことなのではないか思ってます。
         </p>
@@ -98,16 +101,48 @@ Api.fetchNews().then((data) => {
         <p class="text-base text-white　text-center">何ができるの？</p>
         <ul class="md:flex mt-20">
           <li v-for="(item, index) in whatWeCanDo" :key="index" 
-            class="px-6 mt-12 sm:px-20 md:mt-0 md:flex-1 md:px-1">
+            class="px-6 mt-12 sm:px-20 md:mt-0 md:flex-1 md:px-4">
             <p class="text-center text-white font-bold text-lg">
               {{ item.title }}
             </p>
-            <p class="text-white text-base mt-5">
+            <p class="text-white text-sm mt-5">
               {{ item.content }}
             </p>
+            <img :src="item.imageUrl" class="w-2/12 md:w-3/12 what_image" />
           </li>
         </ul>
       </div>
+    </div>
+    <section class="section pt-20">
+      <h2 class="font-pixel text-slate-500 text-4xl text-center">FLOW</h2>
+      <p class="text-base text-slate-500　text-center">どうやって参加するの？</p>
+      <div class="text-lg mt-20">
+        <p class="font-bold text-center">対象</p>
+        <p class="font-bold text-center text-xl text-green">学校に行っていない学生さん(概ね10代)</p>
+        <p class="font-bold text-center mt-6">料金</p>
+        <p class="font-bold text-center text-2xl text-green">無料</p>
+      </div>
+      <div class="text-center mt-20">まずはLINEで中の人とお話ししてみてください</div>
+    </section>
+    <div class="bg-slate-100">
+      <section class="section pt-20">
+        <h2 class="font-pixel text-slate-500 text-4xl text-center">ACCESS</h2>
+        <p class="text-base text-slate-500　text-center">どこにある？</p>
+        <div class="md:flex mt-10">
+          <div class="mb:flex-auto pr-10">
+            <p class="text-sm">031-0841</p>
+            <p class="text-base">青森県八戸市鮫町蟻子5-11</p>
+            <p class="text-base">湊のゲストハウスDrop in内</p>
+            <p class="text-base mt-4">JR八戸線鮫駅から徒歩10分</p>
+            <hr />
+            <div class="my-16">
+              <p class="text-sm font-bold">バーチャルスペース GatherもOK!</p>
+              <iframe src="https://www.youtube.com/embed/SA5Hgbal7co" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <iframe class="w-full md:w-7/12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.3875340852933!2d141.55981181544885!3d40.533026579351784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9b53ec98cdcf25%3A0x14bcb5913c798170!2z44CSMDMxLTA4NDEg6Z2S5qOu55yM5YWr5oi45biC6a6r55S66J-75a2Q77yV4oiS77yR77yR!5e0!3m2!1sja!2sjp!4v1671948702823!5m2!1sja!2sjp" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
     </div>
     <div class="section">
       <h2 class="text-center text-xl font-bold py-16">お知らせ</h2>
@@ -167,7 +202,7 @@ Api.fetchNews().then((data) => {
       width: 100%
     }
     &_main {
-      font-size: 2em;
+      font-size: 1.8em;
       @media (max-width: 800px) {
         font-size: 1.6em;
       }
@@ -175,7 +210,10 @@ Api.fetchNews().then((data) => {
     &_sub {
       font-size: 1.5em;
       @media (max-width: 800px) {
-        font-size: 1.3em;
+        font-size: 1.2em;
+      }
+      @media (max-width: 700px) {
+        font-size: 1.1em;
       }
       @media (max-width: 650px) {
         font-size: 1em;
@@ -210,6 +248,9 @@ Api.fetchNews().then((data) => {
 }
 .bg_dropin-green {
   background-color: var(--dropin-green);
+}
+.what_image {
+  margin: 20px auto;
 }
 .exmaple_item {
   position: relative;

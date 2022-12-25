@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
-import Api from '../api/api.js'
-import NewsList from '../components/NewsList.vue'
+import Api from '../../api/api.js'
+import NewsList from '../../components/NewsList.vue'
 
 const features = ref([
   { 
@@ -82,23 +82,37 @@ Api.fetchNews().then((data) => {
         </li>
       </ul>
     </section>
-    <section class="bg-slate-100">
-      <div class="section mt-10">
-        <h2 class="text-center text-xl font-bold py-16">施設案内</h2>
-        <ul class="">
-          <li v-for="(facility, index) in facilities" :key="index" 
-            class="sm:flex mb-8">
-            <img :src="facility.imageUrl" class="aspect-square facility_img" />
-            <div class="sm:pl-8">
-              <h3 class="font-bold text-green text-lg">
-              {{ facility.title }}
-              </h3>
-              <p class="text-base mt-4">
-                {{ facility.content }}
-              </p>
-            </div>
-          </li>
-        </ul>
+    <section>
+      <h2 class="text-center text-xl font-bold pt-16 sm:pb-16">施設案内</h2>
+      <div class="facility">
+        <div class="facility_content facility_content_01">
+          <h3 class="font-bold text-green text-lg facility_title">宿泊ルーム</h3>
+          <p class="text-base mt-4">
+            宿泊用のお部屋は1つだけ（最大４名様）。<br>
+            疲れをゆっくり癒せるエママットレスのベッドを用意しています。
+          </p>
+        </div>
+        <img src="src/assets/images/facility_01.jpg" class="facility_img"/>
+      </div>
+      <div class="facility">
+        <div class="facility_content facility_content_02">
+          <h3 class="font-bold text-white text-lg facility_title">宿泊ルーム</h3>
+          <p class="text-white text-base mt-4">
+            宿泊用のお部屋は1つだけ（最大４名様）。<br>
+            疲れをゆっくり癒せるエママットレスのベッドを用意しています。
+          </p>
+        </div>
+        <img src="src/assets/images/facility_02.jpg" class="facility_img"/>
+      </div>
+      <div class="facility">
+        <div class="facility_content facility_content_01">
+          <h3 class="font-bold text-green text-lg facility_title">宿泊ルーム</h3>
+          <p class="text-base mt-4">
+            宿泊用のお部屋は1つだけ（最大４名様）。<br>
+            疲れをゆっくり癒せるエママットレスのベッドを用意しています。
+          </p>
+        </div>
+        <img src="src/assets/images/facility_03.jpg" class="facility_img"/>
       </div>
     </section>
     <div class="section">
@@ -114,7 +128,7 @@ Api.fetchNews().then((data) => {
   flex-direction: row-reverse;
   align-items: center;
   width: 100%;
-  background-image: url('../assets/images/kv.jpg');
+  background-image: url('../../assets/images/kv.jpg');
   height: 700px;
   background-attachment: fixed;
   background-size: 100%;
@@ -130,10 +144,55 @@ Api.fetchNews().then((data) => {
     width: 100%;
   }
 }
-.facility_img {
-  /* width: 40%; */
-  @media (min-width: 640px) {
-    width: 40%;
+.facility {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  &_img {
+    width: 120%;
+    max-width: 120%;
+    height: auto;
+    @media (min-width: 640px) {
+      width: 100%;
+    }
+  }
+  &_content {
+    padding: 35px 10%;
+    width: 100%;
+    z-index: 2;
+    @media (min-width: 640px) {
+      position: absolute;
+      padding: 0 10%;
+    }
+    &_01 {
+      background-color: rgba(255,255,255,.5);
+      top: 80px;
+      @media (min-width: 640px) {
+        top: 70px;
+        background-color: transparent;
+      }
+    }
+    &_02 {
+      background-color: rgba(0,0,0,.5);
+      top: 80px;
+      @media (min-width: 640px) {
+        top: auto;
+        bottom: 50px;
+        background-color: transparent;
+      }
+    }
+  }
+  &_title {
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      border-bottom: solid 1px var(--primary);
+      position: absolute;
+      left: 30%;
+      top: 50%;
+    }
   }
 }
 </style>

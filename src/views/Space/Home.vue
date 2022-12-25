@@ -1,0 +1,289 @@
+<script setup>
+import { ref } from 'vue'
+import Api from '../../api/api.js'
+import NewsList from '../../components/NewsList.vue'
+
+const examples = ref([
+  { 
+    imageUrl: 'src/assets/images/main/Dropin_ex01.png',
+    title: "コスプレ服作りたい！"
+  },
+  { 
+    imageUrl: 'src/assets/images/main/Dropin_ex02.png',
+    title: "バンド組みたい！"
+  },
+  { 
+    imageUrl: 'src/assets/images/main/Dropin_ex03.png',
+    title: "アプリ開発したい！"
+  }
+])
+
+const whatWeCanDo = ref([
+  { 
+    title: "やりたいこと応援",
+    imageUrl: 'src/assets/images/main/squid.png',
+    content: "やってみたいことがあれば全力でお手伝いしたり一緒にやったりします！（マンガ描きたいとか、筋トレしたいとかなんでも！）"
+  },
+  { 
+    title: "もくもく作業OK",
+    imageUrl: 'src/assets/images/main/alpa.png',
+    content: "勉強・読書・ゲームなどひたすらやってたい！という方もどうぞ好きなだけどうぞ！（本やゲームはご自身のものをお持ちください）"
+  },
+  { 
+    title: "プログラミング学習",
+    imageUrl: 'src/assets/images/main/white_bear.png',
+    content: "プログラミング学習サービスを使って、無料で学習できます。運営者はデザインと開発を仕事にしているのでアプリ開発のお手伝いできます。"
+  },
+])
+
+const news = ref([]);
+
+Api.fetchNews().then((data) => {
+  news.value = data.contents;
+});
+</script>
+
+<template>
+  <main>
+    <div class="kv">
+      <div class="kv_inner">
+        <div class="kv_title">
+          <h1 class="font-pixel kv_title_main text-white">不登校はフリーランス</h1>
+          <p class="font-pixel kv_title_sub text-white mt-5">学校に行かずに楽しく過ごしてますが何か!?</p>
+        </div>
+        <div class="logo">
+          <img src="src/assets/images/main/Dropin_logo_w.png" />
+        </div>
+      </div>
+    </div>
+    <img src="src/assets/images/main/Dropin_logo_color.png" class="pt-5 logoImg"/>
+    <p class="font-pixel text-center mt-5">てなに?</p>
+    <img src="src/assets/images/main/sky_border.png" class="mt-10"/>
+    <div class="sky">
+      <section class="section pt-10">
+        <p class="text-base text-center">陰キャ・元陰キャ専用。学校に行ってない時間を楽しい時間に変える</p>
+        <h2 class="text-2xl text-center font-bold">学校だけじゃない選択肢を見つける場所</h2>
+        <ul class="md:flex mt-20 pb-20">
+          <li v-for="(exe, index) in examples" :key="index" 
+            class="px-6 mt-12 pb-12 sm:px-20 md:mt-0 md:flex-1 md:px-1 exmaple_item">
+            <p class="text-center text-slate-700 font-bold text-base">たとえば</p>
+            <p class="text-center text-slate-700 font-bold text-lg">
+              {{ exe.title }}
+            </p>
+            <img :src="exe.imageUrl" class="md:p-2" />
+            <p class="text-center text-slate-700 font-bold text-base">とか</p>
+          </li>
+        </ul>
+        <div class="mt-30">
+          <p class="text-base text-center">知恵を絞って実現する方法を考えて</p>
+          <p class="text-3xl text-center font-bold">一緒に挑戦します！</p>
+        </div>
+      </section>
+      <img src="src/assets/images/main/Dropin_ground.png" class="sky_ground"/>
+    </div>
+    <section class="section pt-20">
+      <h2 class="font-pixel text-slate-500 text-4xl text-center">CONCEPT</h2>
+      <p class="text-base text-slate-500　text-center">何のための場所なの？</p>
+      <div class="mt-12">
+        <p class="pt-3">刹那的な意味ではなく、今楽しいことが一番大事。</p>
+        <p class="pt-3">なんのために学校に行くのか？それは将来のために今我慢して、将来幸せになろう！という側面があると思います。</p>
+        <p class="pt-3">でも将来の幸せって、なんだかわからないままのひとが多いはず。</p>
+        <p class="pt-3">そのよくわからない将来の幸せのために、今を犠牲にするのって結構リスキーかもしれない。</p>
+        <p class="pt-3">
+          今楽しいと思うことをやって、「私ってこういう時に幸せを感じるんだな」ってわかれば、その幸せ時間を作るための努力はきっと楽しくなるはず。
+          そして人生の中の多くの時間が「楽しい」時間になるのが幸せってことなのではないか思ってます。
+        </p>
+      </div>
+    </section>
+    <div class="bg_dropin-green">
+      <div class="section">
+        <h2 class="font-pixel text-white text-4xl text-center">WHAT</h2>
+        <p class="text-base text-white　text-center">何ができるの？</p>
+        <ul class="md:flex mt-20">
+          <li v-for="(item, index) in whatWeCanDo" :key="index" 
+            class="px-6 mt-12 sm:px-20 md:mt-0 md:flex-1 md:px-4">
+            <p class="text-center text-white font-bold text-lg">
+              {{ item.title }}
+            </p>
+            <p class="text-white text-sm mt-5">
+              {{ item.content }}
+            </p>
+            <img :src="item.imageUrl" class="w-2/12 md:w-3/12 what_image" />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <section class="section pt-20">
+      <h2 class="font-pixel text-slate-500 text-4xl text-center">FLOW</h2>
+      <p class="text-base text-slate-500　text-center">どうやって参加するの？</p>
+      <div class="text-lg mt-20">
+        <p class="font-bold text-center">対象</p>
+        <p class="font-bold text-center text-xl text-green">学校に行っていない学生さん(概ね10代)</p>
+        <p class="font-bold text-center mt-6">料金</p>
+        <p class="font-bold text-center text-2xl text-green">無料</p>
+      </div>
+      <div class="text-center mt-20">まずはLINEで中の人とお話ししてみてください</div>
+    </section>
+    <div class="bg-slate-100">
+      <section class="section pt-20">
+        <h2 class="font-pixel text-slate-500 text-4xl text-center">ACCESS</h2>
+        <p class="text-base text-slate-500　text-center">どこにある？</p>
+        <div class="md:flex mt-10">
+          <div class="mb:flex-auto pr-10">
+            <p class="text-sm">031-0841</p>
+            <p class="text-base">青森県八戸市鮫町蟻子5-11</p>
+            <p class="text-base">湊のゲストハウスDrop in内</p>
+            <p class="text-base mt-4">JR八戸線鮫駅から徒歩10分</p>
+            <hr />
+            <div class="my-16">
+              <p class="text-sm font-bold">バーチャルスペース GatherもOK!</p>
+              <iframe src="https://www.youtube.com/embed/SA5Hgbal7co" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <iframe class="w-full md:w-7/12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.3875340852933!2d141.55981181544885!3d40.533026579351784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9b53ec98cdcf25%3A0x14bcb5913c798170!2z44CSMDMxLTA4NDEg6Z2S5qOu55yM5YWr5oi45biC6a6r55S66J-75a2Q77yV4oiS77yR77yR!5e0!3m2!1sja!2sjp!4v1671948702823!5m2!1sja!2sjp" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+    </div>
+    <div class="section">
+      <h2 class="text-center text-xl font-bold py-16">お知らせ</h2>
+      <NewsList :newsList="news" />
+    </div>
+  </main>
+</template>
+
+<style lang="scss" scoped>
+.kv {
+  width: 100%;
+  background-image: url('../../assets/images/main/Dropin_kv.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  @media (min-width: 1001px) {
+    background-position: 0, 1300px;
+    height: 1000px;
+  }
+  @media (max-width: 1000px) {
+    height: 900px;
+  }
+  @media (max-width: 800px) {
+    height: 800px;
+  }
+  @media (max-width: 700px) {
+    height: 700px;
+  }
+  @media (max-width: 600px) {
+    height: 600px;
+  }
+  @media (max-width: 500px) {
+    height: 500px;
+  }
+  &_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 250px 10% 200px;
+    @media (min-width: 1000px) {
+      padding: 250px 15% 200px;
+    }
+    @media (max-width: 700px) {
+      padding: 200px 10%;
+    }
+    @media (max-width: 600px) {
+      padding: 150px 10%;
+    }
+    @media (max-width: 500px) {
+      display: block;
+      padding: 120px 50px 0;
+    }
+  }
+  &_title {
+    width: calc(100% - 21vw);
+    @media (max-width: 500px) {
+      text-align: center;
+      width: 100%
+    }
+    &_main {
+      font-size: 1.8em;
+      @media (max-width: 800px) {
+        font-size: 1.6em;
+      }
+    }
+    &_sub {
+      font-size: 1.5em;
+      @media (max-width: 800px) {
+        font-size: 1.2em;
+      }
+      @media (max-width: 700px) {
+        font-size: 1.1em;
+      }
+      @media (max-width: 650px) {
+        font-size: 1em;
+      }
+      @media (max-width: 500px) {
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+.logo {
+  width: 20vw;
+  @media (max-width: 500px) {
+    display: none;
+  }
+  &img {
+    width: 100%;
+  }
+}
+.logoImg {
+  width: 200px;
+  margin: 0 auto;
+}
+.sky {
+  background-color: #D4EFF5;
+  position: relative;
+  padding: 35px 0 65px;
+  &_ground {
+    position: absolute;
+    bottom: 0;
+  }
+}
+.bg_dropin-green {
+  background-color: var(--dropin-green);
+}
+.what_image {
+  margin: 20px auto;
+}
+.exmaple_item {
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    padding-bottom: 100%;
+    background-color: white;
+    top: 0;
+    z-index: -1;
+    border-radius: 50%;
+    transform: scale(0.9) translate(0, -15%);
+  }
+  @media (max-width: 767px) {
+    &::after {
+      width: 55%;
+      padding-bottom: 55%;
+      left: 50%;
+      top: -15%;
+      transform: translate(-50%, 0);
+    }
+  }
+  @media (max-width: 620px) {
+    &::after {
+      width: 65%;
+      padding-bottom: 65%;
+      left: 50%;
+      top: -15%;
+      transform: translate(-50%, 0);
+    }
+  }
+}
+</style>

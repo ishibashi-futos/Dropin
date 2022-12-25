@@ -11,7 +11,7 @@ function formatDate(date) {
 }
 </script>
 <template>
-  <router-link v-for="news in newsList" :key="news.id" :to="`/news/${news.id}`"
+  <router-link v-for="news in newsList" :key="news.id" :to="`/guest_house/news/${news.id}`"
     class="border-b-4 flex py-4">
     <p class="w-40">{{formatDate(news.createdAt)}}</p>
     <p>{{ news.title }}</p>

@@ -1,13 +1,21 @@
 <script setup>
-import { RouterLink } from 'vue-router'
+import { RouterLink } from 'vue-router';
+
+defineProps({
+  menuList: {
+    type: Array,
+    required: true
+  }
+})
 </script>
 
 <template>
   <nav class="headerNav shadow-2xl">
-    <router-link class="item text-slate-700 font-bold" to="/">ホーム</router-link>
-    <div class="item text-slate-700 font-bold">ご予約</div>
-    <div class="item text-slate-700 font-bold">オーナー</div>
-    <router-link class="item text-slate-700 font-bold" to="/news">おしらせ</router-link>
+    <router-link :to="item.link" v-for="item in menuList"
+      class="item text-slate-700 font-bold"
+    >
+    {{ item.name }}
+    </router-link>
   </nav>
 </template>
 

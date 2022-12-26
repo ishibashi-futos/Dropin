@@ -6,15 +6,15 @@ import NewsList from '../../components/NewsList.vue'
 const examples = ref([
   { 
     imageUrl: 'src/assets/images/main/Dropin_ex01.png',
-    title: "コスプレ服作りたい！"
+    title: "コスプレ服作りたい"
   },
   { 
     imageUrl: 'src/assets/images/main/Dropin_ex02.png',
-    title: "バンド組みたい！"
+    title: "バンド組みたい"
   },
   { 
     imageUrl: 'src/assets/images/main/Dropin_ex03.png',
-    title: "アプリ開発したい！"
+    title: "アプリ開発したい"
   }
 ])
 
@@ -49,7 +49,7 @@ Api.fetchNews().then((data) => {
       <div class="kv_inner">
         <div class="kv_title">
           <h1 class="font-pixel kv_title_main text-white">不登校はフリーランス</h1>
-          <p class="font-pixel kv_title_sub text-white mt-5">学校に行かずに楽しく過ごしてますが何か!?</p>
+          <p class="font-pixel kv_title_sub text-white mt-5">学校ニガテでも楽しく過ごしてますが何か!?</p>
         </div>
         <div class="logo">
           <img src="src/assets/images/main/Dropin_logo_w.png" />
@@ -61,22 +61,22 @@ Api.fetchNews().then((data) => {
     <img src="src/assets/images/main/sky_border.png" class="mt-10"/>
     <div class="sky">
       <section class="section pt-10">
-        <p class="text-base text-center">陰キャ・元陰キャ専用。学校に行ってない時間を楽しい時間に変える</p>
-        <h2 class="text-2xl text-center font-bold">学校だけじゃない選択肢を見つける場所</h2>
+        <p class="text-slate-700 text-base text-center">陰キャ・元陰キャ専用。学校に行かない時間を楽しい時間にする</p>
+        <h2 class="text-slate-700 font-pixel text-2xl text-center font-bold mt-4">学校だけじゃない選択肢を探すところ</h2>
         <ul class="md:flex mt-20 pb-20">
           <li v-for="(exe, index) in examples" :key="index" 
             class="px-6 mt-12 pb-12 sm:px-20 md:mt-0 md:flex-1 md:px-1 exmaple_item">
-            <p class="text-center text-slate-700 font-bold text-base">たとえば</p>
-            <p class="text-center text-slate-700 font-bold text-lg">
+            <p class="font-pixel text-center text-green text-base">たとえば…</p>
+            <p class="font-pixel text-center text-green font-bold text-lg">
               {{ exe.title }}
             </p>
             <img :src="exe.imageUrl" class="md:p-2" />
-            <p class="text-center text-slate-700 font-bold text-base">とか</p>
+            <p class="font-pixel text-center text-slate-700 text-base">とか</p>
           </li>
         </ul>
         <div class="mt-30">
           <p class="text-base text-center">知恵を絞って実現する方法を考えて</p>
-          <p class="text-3xl text-center font-bold">一緒に挑戦します！</p>
+          <p class="text-slate-700 font-pixel text-3xl text-center font-bold">一緒に挑戦します！</p>
         </div>
       </section>
       <img src="src/assets/images/main/Dropin_ground.png" class="sky_ground"/>

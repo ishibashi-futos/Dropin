@@ -56,27 +56,31 @@ Api.fetchNews().then((data) => {
         </div>
       </div>
     </div>
-    <img src="src/assets/images/main/Dropin_logo_color.png" class="pt-5 logoImg"/>
+    <img src="src/assets/images/main/Dropin_logo_color.png" class="mt-10 pt-5 logoImg"/>
     <p class="font-pixel text-center mt-5">てなに?</p>
-    <img src="src/assets/images/main/sky_border.png" class="mt-10"/>
-    <div class="sky">
+    <img src="src/assets/images/main/sky_border.png" class="mt-16"/>
+    <div class="sky" id="about">
       <section class="section pt-10">
-        <p class="text-slate-700 text-base text-center">陰キャ・元陰キャ専用。学校に行かない時間を楽しい時間にする</p>
-        <h2 class="text-slate-700 font-pixel text-2xl text-center font-bold mt-4">学校だけじゃない選択肢を探すところ</h2>
+        <div class="rpg_message">
+          <p class="text-slate-700 text-base text-center">陰キャ・元陰キャ専用。学校に行かない時間を楽しい時間にする</p>
+          <h2 class="text-slate-700 font-pixel text-2xl text-center font-bold mt-4">学校だけじゃない選択肢を探すところ</h2>
+        </div>
         <ul class="md:flex mt-20 pb-20">
           <li v-for="(exe, index) in examples" :key="index" 
             class="px-6 mt-12 pb-12 sm:px-20 md:mt-0 md:flex-1 md:px-1 exmaple_item">
-            <p class="font-pixel text-center text-green text-base">たとえば…</p>
-            <p class="font-pixel text-center text-green font-bold text-lg">
-              {{ exe.title }}
-            </p>
-            <img :src="exe.imageUrl" class="md:p-2" />
-            <p class="font-pixel text-center text-slate-700 text-base">とか</p>
+            <img src="src/assets/images/main/e0253_3.png" class="md:w-11/12" />
+            <div class="exmaple_item_inner flex flex-col justify-between">
+              <p class="font-pixel text-center text-base">たとえば…</p>
+              <p class="font-pixel text-center font-bold text-lg py-6">
+                {{ exe.title }}
+              </p>
+              <p class="font-pixel text-center text-slate-700 text-base">とか</p>
+            </div>
           </li>
         </ul>
-        <div class="mt-30">
-          <p class="text-base text-center">知恵を絞って実現する方法を考えて</p>
-          <p class="text-slate-700 font-pixel text-3xl text-center font-bold">一緒に挑戦します！</p>
+        <div class="mt-30 rpg_message bg-black">
+          <p class="text-base text-center text-white">知恵を絞って実現する方法を考えて</p>
+          <p class="font-pixel text-3xl text-center font-bold mt-4 text-white">一緒に挑戦します！</p>
         </div>
       </section>
       <img src="src/assets/images/main/Dropin_ground.png" class="sky_ground"/>
@@ -95,7 +99,7 @@ Api.fetchNews().then((data) => {
         </p>
       </div>
     </section>
-    <div class="bg_dropin-green">
+    <div class="bg_dropin-green" id="what">
       <div class="section">
         <h2 class="font-pixel text-white text-4xl text-center">WHAT</h2>
         <p class="text-base text-white　text-center">何ができるの？</p>
@@ -113,8 +117,8 @@ Api.fetchNews().then((data) => {
         </ul>
       </div>
     </div>
-    <section class="section pt-20">
-      <h2 class="font-pixel text-slate-500 text-4xl text-center">FLOW</h2>
+    <section class="section pt-20" id="join">
+      <h2 class="font-pixel text-slate-500 text-4xl text-center">JOIN!</h2>
       <p class="text-base text-slate-500　text-center">どうやって参加するの？</p>
       <div class="text-lg mt-20">
         <p class="font-bold text-center">対象</p>
@@ -124,7 +128,7 @@ Api.fetchNews().then((data) => {
       </div>
       <div class="text-center mt-20">まずはLINEで中の人とお話ししてみてください</div>
     </section>
-    <div class="bg-slate-100">
+    <div class="bg-slate-100" id="access">
       <section class="section pt-20">
         <h2 class="font-pixel text-slate-500 text-4xl text-center">ACCESS</h2>
         <p class="text-base text-slate-500　text-center">どこにある？</p>
@@ -153,6 +157,7 @@ Api.fetchNews().then((data) => {
 
 <style lang="scss" scoped>
 .kv {
+  margin-top: 100px;
   width: 100%;
   background-image: url('../../assets/images/main/Dropin_kv.jpg');
   background-repeat: no-repeat;
@@ -235,6 +240,15 @@ Api.fetchNews().then((data) => {
 }
 .logoImg {
   width: 200px;
+  @media (min-width: 1200px) {
+    width: 300px;
+  }
+  margin: 15em auto 0;
+}
+.rpg_message {
+  width: fit-content;
+  padding: 20px;
+  border: solid 2px black;
   margin: 0 auto;
 }
 .sky {
@@ -255,35 +269,12 @@ Api.fetchNews().then((data) => {
 .exmaple_item {
   position: relative;
   z-index: 1;
-  &::after {
-    content: "";
-    display: block;
+  &_inner {
     position: absolute;
-    width: 100%;
-    padding-bottom: 100%;
-    background-color: white;
-    top: 0;
-    z-index: -1;
-    border-radius: 50%;
-    transform: scale(0.9) translate(0, -15%);
-  }
-  @media (max-width: 767px) {
-    &::after {
-      width: 55%;
-      padding-bottom: 55%;
-      left: 50%;
-      top: -15%;
-      transform: translate(-50%, 0);
-    }
-  }
-  @media (max-width: 620px) {
-    &::after {
-      width: 65%;
-      padding-bottom: 65%;
-      left: 50%;
-      top: -15%;
-      transform: translate(-50%, 0);
-    }
+    width: 90%;
+    top: 40px;
+    left: 0;
+    height: 50%;
   }
 }
 </style>

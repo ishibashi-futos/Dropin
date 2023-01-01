@@ -5,41 +5,70 @@ defineProps({
   menuList: {
     type: Array,
     required: true
-  }
+  },
+  bgColorClass: {
+    type: String,
+    required: true
+  },
+  headerLogoImg: {
+    type: String,
+    required: true
+  },
+  headerLogoLink: {
+    type: String,
+    required: true
+  },
 })
 </script>
 
 <template>
-  <nav class="headerNav shadow-2xl">
-    <router-link :to="item.link" v-for="item in menuList"
-      class="item text-slate-700 font-bold"
-    >
-    {{ item.name }}
+  <nav class="header shadow-2xl" :class="bgColorClass">
+    <router-link :to="headerLogoLink" class="header_logo px-6">
+      <img :src="headerLogoImg" />
     </router-link>
+    <ul class="header_nav">
+      <a :href="item.link" v-for="item in menuList"
+        class="item"
+      >
+      <li>
+        <img :src="item.imageUrl" class="icon"/>
+        <p class="text-white text-sm text-center">{{ item.name }}</p>
+      </li>
+    </a>
+    </ul>
   </nav>
 </template>
 
 <style lang="scss" scoped>
-.headerNav {
+.header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   width: 100%;
-  height: 50px;
+  height: 100px;
   z-index: 50;
-  background-color: rgba(255, 255, 255, .7);
-  .item {
-    padding: 0 20px;
+  &_logo {
+    width: 150px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
   }
-}
-
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    text-align: left;
+  &_nav {
+    display: flex;
+    justify-content: flex-end;
+    .icon {
+      height: 60px;
+    }
+    .item {
+      width: 120px;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
+  
 }
 </style>

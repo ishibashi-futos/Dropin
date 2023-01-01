@@ -5,35 +5,35 @@ import NewsList from '../../components/NewsList.vue'
 
 const features = ref([
   { 
-    imageUrl: 'src/assets/images/kv.jpg',
+    imageUrl: 'src/assets/images/GH/kv.jpg',
     title: "海まで徒歩10分"
   },
   { 
-    imageUrl: 'src/assets/images/kv.jpg',
+    imageUrl: 'src/assets/images/GH/kv.jpg',
     title: "筋トレマシンあります"
   },
   { 
-    imageUrl: 'src/assets/images/kv.jpg',
+    imageUrl: 'src/assets/images/GH/kv.jpg',
     title: "1日1組のみ"
   }
 ])
 const facilities = ref([
   { 
-    imageUrl: 'src/assets/images/kv.jpg',
+    imageUrl: 'src/assets/images/GH/kv.jpg',
     title: "宿泊ルーム",
     content: `宿泊用のお部屋は1つだけ（最大４名様）。
       疲れをゆっくり癒せるエママットレスのベッドを用意しています。
       `
   },
   { 
-    imageUrl: 'src/assets/images/kv.jpg',
+    imageUrl: 'src/assets/images/GH/kv.jpg',
     title: "開発スペース",
     content: `階の開発スペースにはモニタも用意しています。
     （開発スペースには時期によって宿泊のお客様以外のお客様が使用されている場合があります）
       `
   },
   { 
-    imageUrl: 'src/assets/images/kv.jpg',
+    imageUrl: 'src/assets/images/GH/kv.jpg',
     title: "筋トレルーム",
     content: `エンジニアには筋トレがつきもの。
       カラダとアタマを鍛えるための筋トレマシンのあるお部屋も自由にご利用いただけます。
@@ -41,7 +41,7 @@ const facilities = ref([
       `
   },
   { 
-    imageUrl: 'src/assets/images/kv.jpg',
+    imageUrl: 'src/assets/images/GH/kv.jpg',
     title: "バス＆アメニティ",
     content: `宿泊ルームのある1階にお風呂とトイレがありますので、ご自由にご利用ください。
     `
@@ -58,7 +58,7 @@ Api.fetchNews().then((data) => {
   <main>
     <div class="kv">
       <div class="logo">
-        <img src="src/assets/images/Dropin_logo.png" class="logoImg"/>
+        <img src="src/assets/images/GH/Dropin_logo.png" class="logoImg"/>
         <h1 class="text-white text-base text-center">
           つくるひとのためのいえ
         </h1>
@@ -92,7 +92,7 @@ Api.fetchNews().then((data) => {
             疲れをゆっくり癒せるエママットレスのベッドを用意しています。
           </p>
         </div>
-        <img src="src/assets/images/facility_01.jpg" class="facility_img"/>
+        <img src="src/assets/images/GH/facility_01.jpg" class="facility_img"/>
       </div>
       <div class="facility">
         <div class="facility_content facility_content_02">
@@ -102,7 +102,7 @@ Api.fetchNews().then((data) => {
             疲れをゆっくり癒せるエママットレスのベッドを用意しています。
           </p>
         </div>
-        <img src="src/assets/images/facility_02.jpg" class="facility_img"/>
+        <img src="src/assets/images/GH/facility_02.jpg" class="facility_img"/>
       </div>
       <div class="facility">
         <div class="facility_content facility_content_01">
@@ -112,7 +112,7 @@ Api.fetchNews().then((data) => {
             疲れをゆっくり癒せるエママットレスのベッドを用意しています。
           </p>
         </div>
-        <img src="src/assets/images/facility_03.jpg" class="facility_img"/>
+        <img src="src/assets/images/GH/facility_03.jpg" class="facility_img"/>
       </div>
     </section>
     <div class="section">
@@ -128,7 +128,7 @@ Api.fetchNews().then((data) => {
   flex-direction: row-reverse;
   align-items: center;
   width: 100%;
-  background-image: url('../../assets/images/kv.jpg');
+  background-image: url('../../assets/images/GH/kv.jpg');
   height: 700px;
   background-attachment: fixed;
   background-size: 100%;

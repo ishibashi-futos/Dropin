@@ -7,11 +7,16 @@
   width: 100%;
   padding: 100px 10%;
 }
-
+.bgDeepPurple {
+  background-color: var(--gh-header-purple);
+}
+.bgDeepGreen {
+  background-color: var(--di-deep-green);
+}
 
 @media (hover: hover) {
   a:hover {
-    background-color: #e2e8f0;
+    opacity: .8;
   }
 }
 

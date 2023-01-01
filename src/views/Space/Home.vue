@@ -80,7 +80,7 @@ Api.fetchNews().then((data) => {
         </ul>
         <div class="mt-30 rpg_message bg-black">
           <p class="text-base text-center text-white">知恵を絞って実現する方法を考えて</p>
-          <p class="text-slate-700 font-pixel text-3xl text-center font-bold mt-4 text-white">一緒に挑戦します！</p>
+          <p class="font-pixel text-3xl text-center font-bold mt-4 text-white">一緒に挑戦します！</p>
         </div>
       </section>
       <img src="src/assets/images/main/Dropin_ground.png" class="sky_ground"/>
@@ -157,6 +157,7 @@ Api.fetchNews().then((data) => {
 
 <style lang="scss" scoped>
 .kv {
+  margin-top: 100px;
   width: 100%;
   background-image: url('../../assets/images/main/Dropin_kv.jpg');
   background-repeat: no-repeat;

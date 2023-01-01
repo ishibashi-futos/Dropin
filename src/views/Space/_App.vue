@@ -4,29 +4,39 @@ import { RouterLink, RouterView } from 'vue-router'
 import Header from '../../components/Header.vue'
 const menuList = ref([
   {
-    name: "ホーム",
-    link: "space/"
+    name: "Drop inとは",
+    link: "#about",
+    imageUrl: 'src/assets/images/main/icon/icon_DI_GN_about.png'
   },
   {
-    name: "中の人",
-    link: "space/owner"
+    name: "参加方法",
+    link: "#join",
+    imageUrl: 'src/assets/images/main/icon/icon_DI_GN_join.png'
+  },
+  {
+    name: "アクセス",
+    link: "#access",
+    imageUrl: 'src/assets/images/main/icon/icon_DI_GN_access.png'
   },
   {
     name: "お問合せ",
-    link: "/space/contact"
+    link: "/space/contact",
+    imageUrl: 'src/assets/images/main/icon/icon_DI_GN_contact.png'
   },
 ]);
 </script>
 
 <template>
-  <Header :menuList="menuList" />
-
+  <Header
+    :menuList="menuList"
+    :bgColorClass="'bgDeepGreen'"
+    :headerLogoImg="'src/assets/images/main/Dropin_logo_w.png'"
+    :headerLogoLink="'/space'"
+  />
   <RouterView />
 </template>
 
 <style scoped>
-
-
 @media (min-width: 1024px) {
   
 }

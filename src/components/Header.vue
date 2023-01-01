@@ -27,14 +27,14 @@ defineProps({
       <img :src="headerLogoImg" />
     </router-link>
     <ul class="header_nav">
-      <router-link :to="item.link" v-for="item in menuList"
+      <a :href="item.link" v-for="item in menuList"
         class="item"
       >
       <li>
         <img :src="item.imageUrl" class="icon"/>
         <p class="text-white text-sm">{{ item.name }}</p>
       </li>
-    </router-link>
+    </a>
     </ul>
   </nav>
 </template>

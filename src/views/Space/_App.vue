@@ -5,17 +5,17 @@ import Header from '../../components/Header.vue'
 const menuList = ref([
   {
     name: "Drop inとは",
-    link: "#about",
+    link: "/space#about",
     imageUrl: 'src/assets/images/main/icon/icon_DI_GN_about.png'
   },
   {
     name: "参加方法",
-    link: "#join",
+    link: "/space#join",
     imageUrl: 'src/assets/images/main/icon/icon_DI_GN_join.png'
   },
   {
     name: "アクセス",
-    link: "#access",
+    link: "/space#access",
     imageUrl: 'src/assets/images/main/icon/icon_DI_GN_access.png'
   },
   {

@@ -59,7 +59,7 @@ Api.fetchNews().then((data) => {
     <img src="src/assets/images/main/Dropin_logo_color.png" class="mt-10 pt-5 logoImg"/>
     <p class="font-pixel text-center mt-5">てなに?</p>
     <img src="src/assets/images/main/sky_border.png" class="mt-16"/>
-    <div class="sky">
+    <div class="sky" id="about">
       <section class="section pt-10">
         <div class="rpg_message">
           <p class="text-slate-700 text-base text-center">陰キャ・元陰キャ専用。学校に行かない時間を楽しい時間にする</p>
@@ -99,7 +99,7 @@ Api.fetchNews().then((data) => {
         </p>
       </div>
     </section>
-    <div class="bg_dropin-green">
+    <div class="bg_dropin-green" id="what">
       <div class="section">
         <h2 class="font-pixel text-white text-4xl text-center">WHAT</h2>
         <p class="text-base text-white　text-center">何ができるの？</p>
@@ -117,8 +117,8 @@ Api.fetchNews().then((data) => {
         </ul>
       </div>
     </div>
-    <section class="section pt-20">
-      <h2 class="font-pixel text-slate-500 text-4xl text-center">FLOW</h2>
+    <section class="section pt-20" id="join">
+      <h2 class="font-pixel text-slate-500 text-4xl text-center">JOIN!</h2>
       <p class="text-base text-slate-500　text-center">どうやって参加するの？</p>
       <div class="text-lg mt-20">
         <p class="font-bold text-center">対象</p>
@@ -128,7 +128,7 @@ Api.fetchNews().then((data) => {
       </div>
       <div class="text-center mt-20">まずはLINEで中の人とお話ししてみてください</div>
     </section>
-    <div class="bg-slate-100">
+    <div class="bg-slate-100" id="access">
       <section class="section pt-20">
         <h2 class="font-pixel text-slate-500 text-4xl text-center">ACCESS</h2>
         <p class="text-base text-slate-500　text-center">どこにある？</p>

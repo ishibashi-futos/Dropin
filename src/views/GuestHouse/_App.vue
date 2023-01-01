@@ -6,22 +6,22 @@ const menuList = ref([
   {
     name: "ご予約",
     link: "/guest_house",
-    imageUrl: 'src/assets/images/GH/icon/icon_GH_GN_reserve.png'
+    imageUrl: '/src/assets/images/GH/icon/icon_GH_GN_reserve.png'
   },
   {
     name: "オーナー",
     link: "/guest_house",
-    imageUrl: 'src/assets/images/GH/icon/icon_GH_GN_owner.png'
+    imageUrl: '/src/assets/images/GH/icon/icon_GH_GN_owner.png'
   },
   {
     name: "アクセス",
     link: "/guest_house/access",
-    imageUrl: 'src/assets/images/GH/icon/icon_GH_GN_access.png'
+    imageUrl: '/src/assets/images/GH/icon/icon_GH_GN_access.png'
   },
   {
     name: "お問合せ",
     link: "/guest_house/contact",
-    imageUrl: 'src/assets/images/GH/icon/icon_GH_GN_contact.png'
+    imageUrl: '/src/assets/images/GH/icon/icon_GH_GN_contact.png'
   },
 ]);
 </script>
@@ -30,7 +30,7 @@ const menuList = ref([
   <Header
     :menuList="menuList"
     :bgColorClass="'bgDeepPurple'"
-    :headerLogoImg="'src/assets/images/GH/header_logo.png'"
+    :headerLogoImg="'/src/assets/images/GH/header_logo.png'"
     :headerLogoLink="'/guest_house'"
   />
 

@@ -49,7 +49,7 @@ const facilities = ref([
 ])
 const news = ref([]);
 
-Api.fetchNews().then((data) => {
+Api.fetchNewsIndex('guest_house_top').then((data) => {
   news.value = data.contents;
 });
 </script>
@@ -117,7 +117,8 @@ Api.fetchNews().then((data) => {
     </section>
     <div class="section">
       <h2 class="text-center text-xl font-bold py-16">お知らせ</h2>
-      <NewsList :newsList="news" />
+      <NewsList :newsList="news" :parentRoute="'guest_house'"/>
+      <a href="/guest_house/news" class="text-center">お知らせ一覧へ</a>
     </div>
   </main>
 </template>

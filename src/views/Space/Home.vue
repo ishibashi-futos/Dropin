@@ -38,7 +38,7 @@ const whatWeCanDo = ref([
 
 const news = ref([]);
 
-Api.fetchNews().then((data) => {
+Api.fetchNewsIndex('drop_in_top').then((data) => {
   news.value = data.contents;
 });
 </script>
@@ -56,7 +56,7 @@ Api.fetchNews().then((data) => {
         </div>
       </div>
     </div>
-    <img src="src/assets/images/main/Dropin_logo_color.png" class="mt-10 pt-5 logoImg"/>
+    <img src="src/assets/images/main/Dropin_logo_color.png" class="mt-2 sm:mt-10 md:mt-16 pt-5 logoImg"/>
     <p class="font-pixel text-center mt-5">てなに?</p>
     <img src="src/assets/images/main/sky_border.png" class="mt-16"/>
     <div class="sky" id="about">
@@ -150,37 +150,43 @@ Api.fetchNews().then((data) => {
     </div>
     <div class="section">
       <h2 class="text-center text-xl font-bold py-16">お知らせ</h2>
-      <NewsList :newsList="news" />
+      <NewsList :newsList="news" :parentRoute="'space'"/>
+      <a href="/space/news" class="text-center">お知らせ一覧へ</a>
     </div>
   </main>
 </template>
 
 <style lang="scss" scoped>
 .kv {
-  margin-top: 100px;
+  margin-top: 50px;
+  @media (min-width: 640px) {
+    margin-top: 100px;
+  }
   width: 100%;
   background-image: url('../../assets/images/main/Dropin_kv.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
-  @media (min-width: 1001px) {
+  height: 500px;
+  @media (min-width: 500px) {
+    height: 650px;
+  }
+  @media (min-width: 600px) {
+    height: 750px;
+  }
+  @media (min-width: 700px) {
+    height: 850px;
+  }
+  @media (min-width: 850px) {
+    height: 950px;
+  }
+  @media (min-width: 900px) {
+    height: 1050px;
+  }
+  @media (min-width: 1000px) {
     background-position: 0, 1300px;
-    height: 1000px;
+    height: 1100px;
   }
-  @media (max-width: 1000px) {
-    height: 900px;
-  }
-  @media (max-width: 800px) {
-    height: 800px;
-  }
-  @media (max-width: 700px) {
-    height: 700px;
-  }
-  @media (max-width: 600px) {
-    height: 600px;
-  }
-  @media (max-width: 500px) {
-    height: 500px;
-  }
+
   &_inner {
     display: flex;
     justify-content: space-between;
@@ -243,7 +249,8 @@ Api.fetchNews().then((data) => {
   @media (min-width: 1200px) {
     width: 300px;
   }
-  margin: 15em auto 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 .rpg_message {
   width: fit-content;

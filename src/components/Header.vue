@@ -32,7 +32,7 @@ defineProps({
       >
       <li>
         <img :src="item.imageUrl" class="icon"/>
-        <p class="text-white text-sm">{{ item.name }}</p>
+        <p class="text-white text-sm text-center">{{ item.name }}</p>
       </li>
     </a>
     </ul>

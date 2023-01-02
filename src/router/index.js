@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import GuestHouseApp from '../views/GuestHouse/_App.vue'
 import GuestHouseView from '../views/GuestHouse/GuestHouseView.vue'
+import GuestHouseAccess from '../views/GuestHouse/Access.vue'
 import SpaceApp from '../views/Space/_App.vue'
 import SpaceView from '../views/Space/Home.vue'
 import NewsIndex from '../views/News/Index.vue'
@@ -23,6 +24,11 @@ const router = createRouter({
           path: '',
           name: 'GuestHouseHome',
           component: GuestHouseView,
+        },
+        {
+          path: '/guest_house/access',
+          name: 'GuestHouseAccess',
+          component: GuestHouseAccess,
         },
         {
           path: '/guest_house/contact',

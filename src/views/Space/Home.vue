@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import Api from '../../api/api.js'
 import NewsList from '../../components/NewsList.vue'
+import LINE from '@/components/Line.vue'
 
 const examples = ref([
   { 
@@ -71,7 +72,7 @@ Api.fetchNewsIndex('drop_in_top').then((data) => {
             <img src="src/assets/images/main/e0253_3.png" class="md:w-11/12" />
             <div class="exmaple_item_inner flex flex-col justify-between">
               <p class="font-pixel text-center text-base">たとえば…</p>
-              <p class="font-pixel text-center font-bold text-lg py-6">
+              <p class="font-pixel text-center font-bold text-xl md:text-lg py-6">
                 {{ exe.title }}
               </p>
               <p class="font-pixel text-center text-slate-700 text-base">とか</p>
@@ -126,7 +127,9 @@ Api.fetchNewsIndex('drop_in_top').then((data) => {
         <p class="font-bold text-center mt-6">料金</p>
         <p class="font-bold text-center text-2xl text-green">無料</p>
       </div>
-      <div class="text-center mt-20">まずはLINEで中の人とお話ししてみてください</div>
+      <div class="text-center mt-20">まずはLINEで中の人とお話ししましょう！</div>
+      <LINE />
+      
     </section>
     <div class="bg-slate-100" id="access">
       <section class="section pt-20">

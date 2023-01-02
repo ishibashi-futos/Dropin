@@ -115,7 +115,7 @@ Api.fetchNewsIndex('guest_house_top').then((data) => {
         <img src="src/assets/images/GH/facility_03.jpg" class="facility_img"/>
       </div>
     </section>
-    <div v-if="news.value.length > 0" class="section">
+    <div class="section">
       <h2 class="text-center text-slate-700 text-2xl font-bold py-16">お知らせ</h2>
       <NewsList :newsList="news" :parentRoute="'guest_house'"/>
       <a href="/guest_house/news" class="text-center">お知らせ一覧へ</a>

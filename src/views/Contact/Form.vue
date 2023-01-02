@@ -2,7 +2,8 @@
 import { ref, computed } from 'vue';
 import Api from '../../api/api.js';
 import { useRouter } from "vue-router";
-import Modal from '@/components/Modal.vue'
+import Modal from '@/components/Modal.vue';
+import LINE from '@/components/Line.vue'
 const router = useRouter()
 
 const postData = ref({
@@ -16,13 +17,12 @@ let errorShow = ref(false);
 const isValid = computed(() => {
   return postData.value.email !== '' && postData.value.name !== '' && postData.value.message !== '';
 })
-postData.value.type = router.currentRoute._value.path.startsWith('/guest_house') ? 'guest_house' : 'drop_in';
+const isInGuestHouse = router.currentRoute._value.path.startsWith('/guest_house');
+postData.value.type = isInGuestHouse ? 'guest_house' : 'drop_in';
 
 function handleSubmit() {
   if (!isValid.value) return false;
   Api.postContact(postData.value).then((data) => {
-  console.log(data);
-  debugger;
   if(data.id) {
     postData.value = {}
     modalShow.value = true;
@@ -100,7 +100,11 @@ function handleSubmit() {
       <p v-if="!isValid" class="text-center text-xs text-slate-500 mt-3">
         全部入力いただけると押せるようになります！
       </p>
-  </form>
+    </form>
+    <div v-if="!isInGuestHouse">
+      <p class="text-center font-bold text-lg mt-16">LINEでもOKです！</p>
+      <LINE />
+    </div>
     <Modal v-if="modalShow" @close="modalShow = false">
       <div class="flex flex-col md:flex-row items-center justify-center" >
         <img src="/src/assets/images/GH/icon/icon_GH_GN_owner.png" class="w-5/12 md:w-3/12"/>

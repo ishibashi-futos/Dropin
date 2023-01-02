@@ -5,7 +5,7 @@ import Header from '../../components/Header.vue'
 const menuList = ref([
   {
     name: "ご予約",
-    link: "/guest_house",
+    link: "/guest_house/reserve",
     imageUrl: '/src/assets/images/GH/icon/icon_GH_GN_reserve.png'
   },
   {

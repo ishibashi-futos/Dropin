@@ -4,7 +4,7 @@ import GuestHouseView from '../views/GuestHouse/GuestHouseView.vue'
 import SpaceApp from '../views/Space/_App.vue'
 import SpaceView from '../views/Space/Home.vue'
 import NewsIndex from '../views/News/Index.vue'
-
+import ContactForm from '../views/Contact/Form.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,6 +23,11 @@ const router = createRouter({
           path: '',
           name: 'GuestHouseHome',
           component: GuestHouseView,
+        },
+        {
+          path: '/guest_house/contact',
+          name: 'GuestHouseContactForm',
+          component: ContactForm,
         },
         {
           path: '/guest_house/news',
@@ -50,6 +55,11 @@ const router = createRouter({
           path: '/space/news',
           name: 'newsIndex',
           component: NewsIndex,
+        },
+        {
+          path: '/space/contact',
+          name: 'ContactForm',
+          component: ContactForm,
         },
         {
           path: '/space/news/:id',

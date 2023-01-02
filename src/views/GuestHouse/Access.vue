@@ -19,6 +19,7 @@ const features = ref([
 <template>
   <section class="section mt-16">
     <h2 class="text-slate-700 text-4xl text-center">ACCESS</h2>
+    <p class="text-base text-slate-700　text-center">アクセス</p>
     <div class="text-lg font-bold mt-16 text-center">
       JR八戸線鮫駅から徒歩10分の場所です。<br>
       坂道が多くてちょっと大変だけど、心と体が元気になります！

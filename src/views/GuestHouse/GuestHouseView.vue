@@ -83,7 +83,7 @@ Api.fetchNewsIndex('guest_house_top').then((data) => {
       </ul>
     </section>
     <section>
-      <h2 class="text-center text-xl font-bold pt-16 sm:pb-16">施設案内</h2>
+      <h2 class="text-center text-slate-700 text-2xl font-bold pt-16 sm:pb-16">施設案内</h2>
       <div class="facility">
         <div class="facility_content facility_content_01">
           <h3 class="font-bold text-green text-lg facility_title">宿泊ルーム</h3>
@@ -115,8 +115,8 @@ Api.fetchNewsIndex('guest_house_top').then((data) => {
         <img src="src/assets/images/GH/facility_03.jpg" class="facility_img"/>
       </div>
     </section>
-    <div class="section">
-      <h2 class="text-center text-xl font-bold py-16">お知らせ</h2>
+    <div v-if="news.value.length > 0" class="section">
+      <h2 class="text-center text-slate-700 text-2xl font-bold py-16">お知らせ</h2>
       <NewsList :newsList="news" :parentRoute="'guest_house'"/>
       <a href="/guest_house/news" class="text-center">お知らせ一覧へ</a>
     </div>

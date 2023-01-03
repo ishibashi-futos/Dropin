@@ -8,22 +8,22 @@ const headerMenuList = ref([
   {
     name: "ご予約・料金",
     link: "/guest_house/reserve",
-    imageUrl: '../assets/images/GH/icon/icon_GH_GN_reserve.png'
+    imageUrl: '/images/GH/icon/icon_GH_GN_reserve.png'
   },
   {
     name: "管理人",
     link: "/guest_house/owner",
-    imageUrl: '../assets/images/GH/icon/icon_GH_GN_owner.png'
+    imageUrl: '/images/GH/icon/icon_GH_GN_owner.png'
   },
   {
     name: "アクセス",
     link: "/guest_house/access",
-    imageUrl: '../assets/images/GH/icon/icon_GH_GN_access.png'
+    imageUrl: '/images/GH/icon/icon_GH_GN_access.png'
   },
   {
     name: "お問合せ",
     link: "/guest_house/contact",
-    imageUrl: '../assets/images/GH/icon/icon_GH_GN_contact.png'
+    imageUrl: '/images/GH/icon/icon_GH_GN_contact.png'
   },
 ]);
 

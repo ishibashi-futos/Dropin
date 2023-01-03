@@ -75,18 +75,18 @@ Api.fetchNewsIndex('guest_house_top').then((data) => {
       <ul class="md:flex mt-20">
         <li v-for="(feature, index) in features" :key="index" 
           class="px-12 mt-12 sm:px-20 md:mt-0 md:flex-1 md:px-1">
-          <p class="text-center font-bold text-green text-base">
+          <p class="text-center font-bold text-teal-600 text-base">
             {{ feature.title }}
           </p>
           <img :src="feature.imageUrl" class="rounded-full aspect-square mt-5 md:p-2" />
         </li>
       </ul>
     </section>
-    <section>
+    <section ic="facilities">
       <h2 class="text-center text-slate-700 text-2xl font-bold pt-16 sm:pb-16">施設案内</h2>
       <div class="facility">
         <div class="facility_content facility_content_01">
-          <h3 class="font-bold text-green text-lg facility_title">宿泊ルーム</h3>
+          <h3 class="font-bold text-teal-600 text-lg facility_title">宿泊ルーム</h3>
           <p class="text-base mt-4">
             宿泊用のお部屋は1つだけ（最大４名様）。<br>
             疲れをゆっくり癒せるエママットレスのベッドを用意しています。
@@ -106,7 +106,7 @@ Api.fetchNewsIndex('guest_house_top').then((data) => {
       </div>
       <div class="facility">
         <div class="facility_content facility_content_01">
-          <h3 class="font-bold text-green text-lg facility_title">宿泊ルーム</h3>
+          <h3 class="font-bold text-teal-600 text-lg facility_title">宿泊ルーム</h3>
           <p class="text-base mt-4">
             宿泊用のお部屋は1つだけ（最大４名様）。<br>
             疲れをゆっくり癒せるエママットレスのベッドを用意しています。
@@ -118,7 +118,10 @@ Api.fetchNewsIndex('guest_house_top').then((data) => {
     <div class="section">
       <h2 class="text-center text-slate-700 text-2xl font-bold py-16">お知らせ</h2>
       <NewsList :newsList="news" :parentRoute="'guest_house'"/>
-      <a href="/guest_house/news" class="text-center">お知らせ一覧へ</a>
+      <div class="flex justify-center mt-10">
+        <a href="/guest_house/news" class="btn w-fit bg-teal-600 text-white px-6 py-3 text-sm">お知らせ一覧へ</a>
+      </div>
+      
     </div>
   </main>
 </template>

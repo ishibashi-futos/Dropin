@@ -36,14 +36,14 @@ const features = ref([
     <section class="section">
       <h2 class="text-slate-700 font-bold text-2xl text-center">近くのおすすめスポット</h2>
       <ul class="md:flex mt-20">
-          <li v-for="(feature, index) in features" :key="index" 
-            class="md:flex-1 p-1">
-            <img :src="feature.imageUrl" class="aspect-square" />
-            <p class="text-center font-bold text-base">
-              {{ feature.title }}
-            </p>
-          </li>
-        </ul>
+        <li v-for="(feature, index) in features" :key="index" 
+          class="md:flex-1 p-1">
+          <img :src="feature.imageUrl" class="aspect-square" />
+          <p class="text-center font-bold text-base">
+            {{ feature.title }}
+          </p>
+        </li>
+      </ul>
     </section>
   </div>
 </template>

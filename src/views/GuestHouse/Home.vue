@@ -47,6 +47,9 @@ const facilities = [
   }
 ]
 const news = ref([]);
+const generateImgPath = (url) => {
+  return new URL(url, import.meta.url).href
+}
 
 Api.fetchNewsIndex('guest_house_top').then((data) => {
   news.value = data.contents;
@@ -77,7 +80,9 @@ Api.fetchNewsIndex('guest_house_top').then((data) => {
           <p class="text-center font-bold text-teal-600 text-base">
             {{ feature.title }}
           </p>
-          <img :src="feature.imageUrl" class="rounded-full aspect-square mt-5 md:p-2" />
+          <!-- <img :src="feature.imageUrl" class="rounded-full aspect-square mt-5 md:p-2" /> -->
+          <img :src="generateImgPath(feature.imageUrl)" class="rounded-full aspect-square mt-5 md:p-2" />
+          
         </li>
       </ul>
     </section>

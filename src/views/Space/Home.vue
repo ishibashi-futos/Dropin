@@ -122,10 +122,12 @@ Api.fetchNewsIndex('drop_in_top').then((data) => {
       <h2 class="font-pixel text-slate-500 text-4xl text-center">JOIN!</h2>
       <p class="text-base text-slate-500　text-center">どうやって参加するの？</p>
       <div class="text-lg mt-20">
-        <p class="font-bold text-center">対象</p>
+        <p class="font-bold text-center underline">対象</p>
         <p class="font-bold text-center text-xl text-green">学校に行っていない学生さん(概ね10代)</p>
-        <p class="font-bold text-center mt-6">料金</p>
+        <p class="font-bold text-center mt-6 underline">料金</p>
         <p class="font-bold text-center text-2xl text-green">無料</p>
+        <p class="font-bold text-center mt-10 underline">営業日カレンダー</p>
+        <iframe class="w-full mt-1" src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Asia%2FTokyo&showTitle=0&showTz=0&showCalendars=0&src=ZHJvcGluLmhhY2hpbm9oZUBnbWFpbC5jb20&color=%23039BE5" height="600" frameborder="0" scrolling="no"></iframe>
       </div>
       <div class="text-center mt-20">まずはLINEで中の人とお話ししましょう！</div>
       <LINE />

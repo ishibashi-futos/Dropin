@@ -15,7 +15,7 @@ import { ref } from 'vue'
       </ol>
     </div>
     <h2 class="mt-24 text-slate-700 text-xl font-bold text-center" id="calendar">宿泊カレンダー</h2>
-    <iframe class="w-full mt-6" src="https://calendar.google.com/calendar/embed?src=5356a96979ffcf0121994713790eae1853bae432772501b7beca32ac4fdf1166%40group.calendar.google.com&ctz=Asia%2FTokyo" style="border: 0" height="600" frameborder="0" scrolling="no"></iframe>
+    <iframe class="w-full mt-6" src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Asia%2FTokyo&showTitle=0&showTz=0&showCalendars=0&src=NTM1NmE5Njk3OWZmY2YwMTIxOTk0NzEzNzkwZWFlMTg1M2JhZTQzMjc3MjUwMWI3YmVjYTMyYWM0ZmRmMTE2NkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23C0CA33" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
   </section>
   <div class="bg-slate-100">
     <section class="section" id="form">

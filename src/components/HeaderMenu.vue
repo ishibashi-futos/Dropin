@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink } from 'vue-router';
+import { generateImgPath } from '../utils/common.js'
 
 defineProps({
   menuList: {
@@ -23,7 +23,7 @@ defineProps({
       @click.native="$emit('close')"
       class="item pl-3"
     >
-        <img :src="item.imageUrl" class="icon"/>
+        <img :src="generateImgPath(item.imageUrl)" class="icon"/>
         <p class="text-white text-sm text-center">{{ item.name }}</p>
     </a>
   </nav>

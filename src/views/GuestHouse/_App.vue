@@ -3,26 +3,27 @@ import { ref } from 'vue'
 import { RouterView } from 'vue-router'
 import Header from '../../components/Header.vue'
 import Footer from '../../components/Footer.vue'
+
 const headerMenuList = ref([
   {
     name: "ご予約・料金",
     link: "/guest_house/reserve",
-    imageUrl: '/src/assets/images/GH/icon/icon_GH_GN_reserve.png'
+    imageUrl: '../assets/images/GH/icon/icon_GH_GN_reserve.png'
   },
   {
     name: "管理人",
     link: "/guest_house/owner",
-    imageUrl: '/src/assets/images/GH/icon/icon_GH_GN_owner.png'
+    imageUrl: '../assets/images/GH/icon/icon_GH_GN_owner.png'
   },
   {
     name: "アクセス",
     link: "/guest_house/access",
-    imageUrl: '/src/assets/images/GH/icon/icon_GH_GN_access.png'
+    imageUrl: '../assets/images/GH/icon/icon_GH_GN_access.png'
   },
   {
     name: "お問合せ",
     link: "/guest_house/contact",
-    imageUrl: '/src/assets/images/GH/icon/icon_GH_GN_contact.png'
+    imageUrl: '../assets/images/GH/icon/icon_GH_GN_contact.png'
   },
 ]);
 

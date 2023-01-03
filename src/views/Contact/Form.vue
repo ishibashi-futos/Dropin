@@ -107,7 +107,7 @@ function handleSubmit() {
     </div>
     <Modal v-if="modalShow" @close="modalShow = false">
       <div class="flex flex-col md:flex-row items-center justify-center" >
-        <img src="/src/assets/images/GH/icon/icon_GH_GN_owner.png" class="w-5/12 md:w-3/12"/>
+        <img src="/images/GH/icon/icon_GH_GN_owner.png" class="w-5/12 md:w-3/12"/>
         <div>
           <p>お問い合わせありがとうございます。</p>
           <p>お問い合わせ内容をメールにて送信しました。</p>

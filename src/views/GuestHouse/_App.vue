@@ -93,7 +93,7 @@ const snsList = ref([
   <Header
     :menuList="headerMenuList"
     :bgColorClass="'bgDeepPurple'"
-    :headerLogoImg="'/src/assets/images/GH/header_logo.png'"
+    :headerLogoImg="'/images/GH/header_logo.png'"
     :headerLogoLink="'/guest_house'"
   />
   <RouterView />
@@ -101,7 +101,7 @@ const snsList = ref([
     :menuList="footerMenuList"
     :snsList="snsList"
     :bgColorClass="'bgDeepPurple'"
-    :headerLogoImg="'/src/assets/images/GH/Dropin_logo.png'"
+    :headerLogoImg="'/images/GH/Dropin_logo.png'"
     :headerLogoLink="'/guest_house'"
     >
   </Footer>

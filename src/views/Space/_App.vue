@@ -8,22 +8,22 @@ const headerMenuList = ref([
   {
     name: "Drop inとは",
     link: "/space#about",
-    imageUrl: '../assets/images/main/icon/icon_DI_GN_about.png'
+    imageUrl: '/images/main/icon/icon_DI_GN_about.png'
   },
   {
     name: "参加方法",
     link: "/space#join",
-    imageUrl: '../assets/images/main/icon/icon_DI_GN_join.png'
+    imageUrl: '/images/main/icon/icon_DI_GN_join.png'
   },
   {
     name: "アクセス",
     link: "/space#access",
-    imageUrl: '../assets/images/main/icon/icon_DI_GN_access.png'
+    imageUrl: '/images/main/icon/icon_DI_GN_access.png'
   },
   {
     name: "お問合せ",
     link: "/space/contact",
-    imageUrl: '../assets/images/main/icon/icon_DI_GN_contact.png'
+    imageUrl: '/images/main/icon/icon_DI_GN_contact.png'
   },
 ]);
 
@@ -97,7 +97,7 @@ const snsList = ref([
   <Header
     :menuList="headerMenuList"
     :bgColorClass="'bgDeepGreen'"
-    :headerLogoImg="'../assets/images/main/Dropin_logo_w.png'"
+    :headerLogoImg="'/images/main/Dropin_logo_w.png'"
     :headerLogoLink="'/space'"
   />
   <RouterView />
@@ -105,7 +105,7 @@ const snsList = ref([
     :menuList="footerMenuList"
     :snsList="snsList"
     :bgColorClass="'bgDeepGreen'"
-    :headerLogoImg="'../assets/images/main/Dropin_logo_w.png'"
+    :headerLogoImg="'/images/main/Dropin_logo_w.png'"
     :headerLogoLink="'/space'"
     >
     <a href="https://lin.ee/xqlJ0IB">

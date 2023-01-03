@@ -1,6 +1,4 @@
 <script setup>
-// import { generateImgPath } from '../utils/common.js'
-
 defineProps({
   menuList: {
     type: Array,

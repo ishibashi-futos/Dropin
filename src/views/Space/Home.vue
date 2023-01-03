@@ -6,15 +6,15 @@ import LINE from '@/components/Line.vue'
 
 const examples = [
   { 
-    imageUrl: '/src/assets/images/main/Dropin_ex01.png',
+    imageUrl: '/images/main/Dropin_ex01.png',
     title: "コスプレ服作りたい"
   },
   { 
-    imageUrl: '/src/assets/images/main/Dropin_ex02.png',
+    imageUrl: '/images/main/Dropin_ex02.png',
     title: "バンド組みたい"
   },
   { 
-    imageUrl: '/src/assets/images/main/Dropin_ex03.png',
+    imageUrl: '/images/main/Dropin_ex03.png',
     title: "アプリ開発したい"
   }
 ]
@@ -22,17 +22,17 @@ const examples = [
 const whatWeCanDo = [
   { 
     title: "やりたいこと応援",
-    imageUrl: '/src/assets/images/main/squid.png',
+    imageUrl: '/images/main/squid.png',
     content: "やってみたいことがあれば全力でお手伝いしたり一緒にやったりします！（マンガ描きたいとか、筋トレしたいとかなんでも！）"
   },
   { 
     title: "もくもく作業OK",
-    imageUrl: '/src/assets/images/main/alpa.png',
+    imageUrl: '/images/main/alpa.png',
     content: "勉強・読書・ゲームなどひたすらやってたい！という方もどうぞ好きなだけどうぞ！（本やゲームはご自身のものをお持ちください）"
   },
   { 
     title: "プログラミング学習",
-    imageUrl: '/src/assets/images/main/white_bear.png',
+    imageUrl: '/images/main/white_bear.png',
     content: "プログラミング学習サービスを使って、無料で学習できます。運営者はデザインと開発を仕事にしているのでアプリ開発のお手伝いできます。"
   },
 ]
@@ -53,13 +53,13 @@ Api.fetchNewsIndex('drop_in_top').then((data) => {
           <p class="font-pixel kv_title_sub text-white mt-5">学校ニガテでも楽しく過ごしてますが何か!?</p>
         </div>
         <div class="logo">
-          <img src="/src/assets/images/main/Dropin_logo_w.png" />
+          <img src="/images/main/Dropin_logo_w.png" />
         </div>
       </div>
     </div>
-    <img src="/src/assets/images/main/Dropin_logo_color.png" class="mt-2 sm:mt-10 md:mt-16 pt-5 logoImg"/>
+    <img src="/images/main/Dropin_logo_color.png" class="mt-2 sm:mt-10 md:mt-16 pt-5 logoImg"/>
     <p class="font-pixel text-center mt-5">てなに?</p>
-    <img src="/src/assets/images/main/sky_border.png" class="mt-16"/>
+    <img src="/images/main/sky_border.png" class="mt-16"/>
     <div class="sky" id="about">
       <section class="section pt-10">
         <div class="rpg_message">
@@ -69,7 +69,7 @@ Api.fetchNewsIndex('drop_in_top').then((data) => {
         <ul class="md:flex mt-20 pb-20">
           <li v-for="(exe, index) in examples" :key="index" 
             class="px-6 mt-12 pb-12 sm:px-20 md:mt-0 md:flex-1 md:px-1 exmaple_item">
-            <img src="/src/assets/images/main/e0253_3.png" class="md:w-11/12" />
+            <img src="/images/main/e0253_3.png" class="md:w-11/12" />
             <div class="exmaple_item_inner flex flex-col justify-between">
               <p class="font-pixel text-center text-base">たとえば…</p>
               <p class="font-pixel text-center font-bold text-xl md:text-lg py-6">
@@ -84,7 +84,7 @@ Api.fetchNewsIndex('drop_in_top').then((data) => {
           <p class="font-pixel text-3xl text-center font-bold mt-4 text-white">一緒に挑戦します！</p>
         </div>
       </section>
-      <img src="/src/assets/images/main/Dropin_ground.png" class="sky_ground"/>
+      <img src="/images/main/Dropin_ground.png" class="sky_ground"/>
     </div>
     <section class="section pt-20">
       <h2 class="font-pixel text-slate-500 text-4xl text-center">CONCEPT</h2>
@@ -178,7 +178,7 @@ Api.fetchNewsIndex('drop_in_top').then((data) => {
     margin-top: 100px;
   }
   width: 100%;
-  background-image: url('../../assets/images/main/Dropin_kv.jpg');
+  background-image: url('/images/main/Dropin_kv.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
   height: 500px;

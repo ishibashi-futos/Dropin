@@ -1,8 +1,5 @@
 <script setup>
 import { RouterLink } from 'vue-router';
-import { ref, computed } from 'vue'
-
-const openMenu = ref(false);
 
 defineProps({
   menuList: {
@@ -37,7 +34,7 @@ defineProps({
         <ul class="flex sm:ml-6">
           <li v-for="sns in snsList" class="flex frex-col items-center">
             <a :href="sns.link" target="_blank">
-              <img :src="`/src/assets/images/sns/icon_${sns.name}.svg`" class="w-12 px-1"/>
+              <img :src="`/images/sns/icon_${sns.name}.svg`" class="w-12 px-1"/>
             </a>
           </li>
           <li>

@@ -33,7 +33,7 @@ const things = [
   <section class="section">
     <h2 class="text-center text-slate-700 text-2xl font-bold py-16">管理人</h2>
     <div class="flex justify-center items-center">
-      <img src="/src/assets/images/profile.png" class="w-5/12 sm:w-4/12 md:w-3/12"/>
+      <img src="/images/profile.png" class="w-5/12 sm:w-4/12 md:w-3/12"/>
       <div class="pl-8">
         <p class="font-bold sm:text-lg text-base">石橋優希</p>
         <p class="text-sm sm:text-base">青森県八戸市出身</p>

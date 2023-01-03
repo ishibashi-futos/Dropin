@@ -1,7 +1,6 @@
 <script setup>
 import { RouterLink } from 'vue-router';
 import { ref, computed } from 'vue'
-import { generateImgPath } from '../utils/common.js'
 import HeaderMenu from './HeaderMenu.vue'
 
 const openMenu = ref(false);
@@ -31,7 +30,7 @@ defineProps({
 <template>
   <nav class="header shadow-2xl" :class="bgColorClass">
     <router-link :to="headerLogoLink" class="header_logo px-6">
-      <img :src="generateImgPath(headerLogoImg)" />
+      <img :src="headerLogoImg" />
     </router-link>
     <HeaderMenu
       :menuList="menuList"

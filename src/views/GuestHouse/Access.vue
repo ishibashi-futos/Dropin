@@ -3,15 +3,15 @@ import { ref } from 'vue'
 
 const features = ref([
   { 
-    imageUrl: '/src/assets/images/GH/kv.jpg',
+    imageUrl: '/images/GH/kv.jpg',
     title: "海まで徒歩10分"
   },
   { 
-    imageUrl: '/src/assets/images/GH/kv.jpg',
+    imageUrl: '/images/GH/kv.jpg',
     title: "筋トレマシンあります"
   },
   { 
-    imageUrl: '/src/assets/images/GH/kv.jpg',
+    imageUrl: '/images/GH/kv.jpg',
     title: "1日1組のみ"
   }
 ])

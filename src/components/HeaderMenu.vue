@@ -18,16 +18,14 @@ defineProps({
 </script>
 
 <template>
-  <ul :class="[bgColorClass, headerClass]">
+  <nav :class="[bgColorClass, headerClass]">
     <a :href="item.link" v-for="item in menuList"
       @click.native="$emit('close')"
       class="item pl-3"
     >
-      <li>
         <img :src="item.imageUrl" class="icon"/>
         <p class="text-white text-sm text-center">{{ item.name }}</p>
-      </li>
     </a>
-  </ul>
+  </nav>
 </template>
 

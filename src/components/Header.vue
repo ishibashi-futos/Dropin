@@ -36,7 +36,7 @@ defineProps({
       :menuList="menuList"
       :headerClass="'header_nav'" />
     
-    <div class="toggleBtn text-sm mr-3" @click="openMenu = !openMenu">{{message}}</div>
+    <div class="toggle_btn text-sm mr-3" @click="openMenu = !openMenu">{{message}}</div>
       <transition name="slide">
         <HeaderMenu v-show="openMenu"
           :menuList="menuList"
@@ -81,14 +81,14 @@ defineProps({
   }
   .item {
     width: 120px;
-    padding: 0 20px;
+    padding: 0 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 }
-.toggleBtn {
+.toggle_btn {
   display: grid;
   @media (min-width: 640px) {
     display: none;
@@ -111,12 +111,10 @@ defineProps({
   .item {
     width: 50%;
     border-top: dotted 1px white;
+    display: flex;
+      align-items: center;
     &:nth-child(2n) {
       border-left: dotted 1px white;
-    }
-    li {
-      display: flex;
-      align-items: center;
     }
   }
   .icon {

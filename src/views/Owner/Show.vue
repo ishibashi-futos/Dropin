@@ -2,7 +2,7 @@
 const things = [
   {
     name: "Drop in",
-    link: "https://dropin8.site/space",
+    link: "/space",
     description: `
       不登校や引きこもりで時間が余っている方と一緒にCreateしたい！と思って立ち上げた団体です。
       八戸市の施設はっちと組んでインターン事業を実施したこともありました。
@@ -11,7 +11,7 @@ const things = [
   },
   {
     name: "湊のゲストハウス Drop in",
-    link: "https://dropin8.site/guest_house",
+    link: "/guest_house",
     description: `
       八戸市鮫町の自宅をゲストハウスとして運営しています。
       私自身も開発者として快適に作業できるような開発合宿やものつくりに特化したゲストハウスです。

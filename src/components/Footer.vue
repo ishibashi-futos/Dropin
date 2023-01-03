@@ -53,11 +53,11 @@ defineProps({
               {{ menu.title }}
             </p>
             <ul class="mt-3">
-              <router-link :to="item.link" v-for="item in menu.itemList">
+              <a :href="item.link" v-for="item in menu.itemList">
                 <li class="pb-1">
                   <p>{{ item.name }}</p>
                 </li>
-              </router-link>
+              </a>
             </ul>
           </li>
         </ul>

@@ -1,12 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import GuestHouseApp from '../views/GuestHouse/_App.vue'
-import GuestHouseView from '../views/GuestHouse/GuestHouseView.vue'
+import GuestHouseHome from '../views/GuestHouse/Home.vue'
 import GuestHouseAccess from '../views/GuestHouse/Access.vue'
 import GuestHouseReserve from '../views/GuestHouse/Reserve.vue'
 import SpaceApp from '../views/Space/_App.vue'
-import SpaceView from '../views/Space/Home.vue'
+import SpaceHome from '../views/Space/Home.vue'
 import NewsIndex from '../views/News/Index.vue'
 import ContactForm from '../views/Contact/Form.vue'
+import Owner from '../views/Owner/Show.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,7 +25,7 @@ const router = createRouter({
         {
           path: '',
           name: 'GuestHouseHome',
-          component: GuestHouseView,
+          component: GuestHouseHome,
         },
         {
           path: '/guest_house/access',
@@ -40,6 +41,11 @@ const router = createRouter({
           path: '/guest_house/contact',
           name: 'GuestHouseContactForm',
           component: ContactForm,
+        },
+        {
+          path: '/guest_house/owner',
+          name: 'GuestHouseOwner',
+          component: Owner,
         },
         {
           path: '/guest_house/news',
@@ -61,16 +67,21 @@ const router = createRouter({
         {
           path: '',
           name: 'SpaceHome',
-          component: SpaceView,
+          component: SpaceHome,
+        },
+        {
+          path: '/space/owner',
+          name: 'SpaceOwner',
+          component: Owner,
         },
         {
           path: '/space/news',
-          name: 'newsIndex',
+          name: 'SpaceNewsIndex',
           component: NewsIndex,
         },
         {
           path: '/space/contact',
-          name: 'ContactForm',
+          name: 'SpaceContactForm',
           component: ContactForm,
         },
         {

@@ -10,8 +10,8 @@ const headerMenuList = ref([
     imageUrl: '/src/assets/images/GH/icon/icon_GH_GN_reserve.png'
   },
   {
-    name: "オーナー",
-    link: "/guest_house",
+    name: "管理人",
+    link: "/guest_house/owner",
     imageUrl: '/src/assets/images/GH/icon/icon_GH_GN_owner.png'
   },
   {

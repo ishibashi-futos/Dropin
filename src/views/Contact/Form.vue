@@ -116,7 +116,8 @@ function handleSubmit() {
       </div>
       <div class="flex justify-center">
         <div class="btn w-fit bg-teal-600 text-white px-6 py-3 text-md"
-          @click="modalShow = false">閉じる</div>
+          @click="modalShow = false">閉じる
+        </div>
       </div>
     </Modal>
   </div>

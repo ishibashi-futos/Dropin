@@ -1,8 +1,10 @@
 <script setup>
 import { ref } from 'vue'
-import { RouterLink, RouterView } from 'vue-router'
-import Header from '../../components/Header.vue'
-const menuList = ref([
+import { RouterView } from 'vue-router'
+import Header from '../../components/Header.vue';
+import Footer from '../../components/Footer.vue';
+
+const headerMenuList = ref([
   {
     name: "Drop inとは",
     link: "/space#about",
@@ -24,16 +26,92 @@ const menuList = ref([
     imageUrl: '/src/assets/images/main/icon/icon_DI_GN_contact.png'
   },
 ]);
+
+const footerMenuList = ref([
+  {
+    title: "Drop inについて",
+    itemList: [
+      {
+        name: "Drop inとは",
+        link: "/space#about",
+      },
+      {
+        name: "アクセス",
+        link: "/space#access",
+      },
+      {
+        name: "お知らせ",
+        link: "/space/news",
+      },
+      {
+        name: "お問合せ",
+        link: "/space/contact",
+      },
+    ]
+  },
+  {
+    title: "ご参加について",
+    itemList: [
+      {
+        name: "参加方法",
+        link: "/space#join",
+      },
+      {
+        name: "営業日カレンダー",
+        link: "/space#calendar",
+      },
+    ]
+  },
+  {
+    title: "Drop inの他のこと",
+    itemList: [
+      {
+        name: "湊のゲストハウスDrop in",
+        link: "/guest_house",
+      },
+      {
+        name: "管理人",
+        link: "/space/owner",
+      },
+    ]
+  }
+])
+
+const snsList = ref([
+  {
+    name: "instagram",
+    link: "https://www.instagram.com/dropin8nohe",
+  },
+  {
+    name: "twitter",
+    link: "https://twitter.com/Dropin88",
+  },
+  {
+    name: "GitHub",
+    link: "https://github.com/YuukiIshibashi/Dropin",
+  },
+])
 </script>
 
 <template>
   <Header
-    :menuList="menuList"
+    :menuList="headerMenuList"
     :bgColorClass="'bgDeepGreen'"
     :headerLogoImg="'/src/assets/images/main/Dropin_logo_w.png'"
     :headerLogoLink="'/space'"
   />
   <RouterView />
+  <Footer
+    :menuList="footerMenuList"
+    :snsList="snsList"
+    :bgColorClass="'bgDeepGreen'"
+    :headerLogoImg="'/src/assets/images/main/Dropin_logo_w.png'"
+    :headerLogoLink="'/space'"
+    >
+    <a href="https://lin.ee/xqlJ0IB">
+      <img class="h-12 ml-3" src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" border="0">
+    </a>
+  </Footer>
 </template>
 
 <style scoped>

@@ -89,11 +89,14 @@ Api.fetchNewsIndex('drop_in_top').then((data) => {
     <section class="section pt-20">
       <h2 class="font-pixel text-slate-500 text-4xl text-center">CONCEPT</h2>
       <p class="text-base text-slate-500　text-center">何のための場所なの？</p>
-      <div class="mt-12">
-        <p class="pt-3">刹那的な意味ではなく、今楽しいことが一番大事。</p>
-        <p class="pt-3">なんのために学校に行くのか？それは将来のために今我慢して、将来幸せになろう！という側面があると思います。</p>
+      <h3 class="text-xl font-bold mt-12">
+        Drop inは、一緒に行き先を模索する場所
+      </h3>
+      <div class="mt-6">
+        <p class="pt-3">刹那的な意味ではなく、<span class="font-bold">「今」</span>楽しいことが一番大事。</p>
+        <p class="pt-3">なんのために学校に行くのか？それは将来のために今はちょっと我慢して、将来幸せになろう！という側面があると思います。</p>
         <p class="pt-3">でも将来の幸せって、なんだかわからないままのひとが多いはず。</p>
-        <p class="pt-3">そのよくわからない将来の幸せのために、今を犠牲にするのって結構リスキーかもしれない。</p>
+        <p class="pt-3">その「よくわからない将来の幸せ」のために、今を犠牲にするのって結構リスキーかもしれない。</p>
         <p class="pt-3">
           今楽しいと思うことをやって、「私ってこういう時に幸せを感じるんだな」ってわかれば、その幸せ時間を作るための努力はきっと楽しくなるはず。
           そして人生の中の多くの時間が「楽しい」時間になるのが幸せってことなのではないか思ってます。
@@ -146,18 +149,22 @@ Api.fetchNewsIndex('drop_in_top').then((data) => {
         <h2 class="font-pixel text-slate-500 text-4xl text-center">ACCESS</h2>
         <p class="text-base text-slate-500　text-center">どこにある？</p>
         <div class="md:flex mt-10">
-          <div class="mb:flex-auto pr-10">
+          <div class="pr-10  md:w-4/12">
             <p class="text-sm">031-0841</p>
             <p class="text-base">青森県八戸市鮫町蟻子5-11</p>
             <p class="text-base">湊のゲストハウスDrop in内</p>
             <p class="text-base mt-4">JR八戸線鮫駅から徒歩10分</p>
-            <hr />
-            <div class="my-16">
-              <p class="text-sm font-bold">バーチャルスペース GatherもOK!</p>
-              <iframe src="https://www.youtube.com/embed/SA5Hgbal7co" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
           </div>
-          <iframe class="w-full md:w-7/12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.3875340852933!2d141.55981181544885!3d40.533026579351784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9b53ec98cdcf25%3A0x14bcb5913c798170!2z44CSMDMxLTA4NDEg6Z2S5qOu55yM5YWr5oi45biC6a6r55S66J-75a2Q77yV4oiS77yR77yR!5e0!3m2!1sja!2sjp!4v1671948702823!5m2!1sja!2sjp" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe class="w-full md:w-8/12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.3875340852933!2d141.55981181544885!3d40.533026579351784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9b53ec98cdcf25%3A0x14bcb5913c798170!2z44CSMDMxLTA4NDEg6Z2S5qOu55yM5YWr5oi45biC6a6r55S66J-75a2Q77yV4oiS77yR77yR!5e0!3m2!1sja!2sjp!4v1671948702823!5m2!1sja!2sjp" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p class="text-lg font-bold text-center mt-16">バーチャルスペース GatherもOK!</p>
+        <p class="text-base mt-6">
+          直接くるのが難しい！という場合はパソコンやスマホからアクセスできる空間も用意しています。
+          Gatherというアプリケーションを使ったバーチャル空間です。
+        </p>
+        <div class="md:flex justify-center mt-8">
+          <img src="/images/main/gather.png" class="aspect-video w-full md:w-6/12 px-1"/>
+          <iframe class="aspect-video w-full md:w-6/12 px-1" src="https://www.youtube.com/embed/SA5Hgbal7co" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </section>
     </div>

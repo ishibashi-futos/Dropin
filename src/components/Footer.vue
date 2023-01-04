@@ -51,7 +51,7 @@ defineProps({
             </p>
             <ul class="mt-3">
               <a :href="item.link" v-for="item in menu.itemList">
-                <li class="pb-1">
+                <li class="pb-1 text-sm">
                   <p>{{ item.name }}</p>
                 </li>
               </a>
@@ -59,7 +59,7 @@ defineProps({
           </li>
         </ul>
       </section>
-      <p class="text-xs text-white text-center">© Drop in. All RIGHTS RESERVED.</p>
+      <p class="mt-8 text-xs text-white text-center">© Drop in. All RIGHTS RESERVED.</p>
     </section>
   </div>
 </template>

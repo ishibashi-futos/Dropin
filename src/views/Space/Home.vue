@@ -124,6 +124,7 @@ Api.fetchNewsIndex('drop_in_top').then((data) => {
     <section class="section pt-20" id="join">
       <h2 class="font-pixel text-slate-500 text-4xl text-center">JOIN!</h2>
       <p class="text-base text-slate-500　text-center">どうやって参加するの？</p>
+      <h3 class="text-center text-lg font-bold text-red-600 mt-6">2023年3月頃活動開始予定です。現在お問い合わせのみ受け付けております。</h3>
       <div class="text-lg mt-20">
         <dl>
           <dt class="font-bold text-center underline">対象</dt>
@@ -153,6 +154,7 @@ Api.fetchNewsIndex('drop_in_top').then((data) => {
             <p class="text-sm">031-0841</p>
             <p class="text-base">青森県八戸市鮫町蟻子5-11</p>
             <p class="text-base">湊のゲストハウスDrop in内</p>
+            <a href="/guest_house" class="text-xs underline">湊のゲストハウスDrop inについてはこちら</a>
             <p class="text-base mt-4">JR八戸線鮫駅から徒歩10分</p>
           </div>
           <iframe class="w-full md:w-8/12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.3875340852933!2d141.55981181544885!3d40.533026579351784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9b53ec98cdcf25%3A0x14bcb5913c798170!2z44CSMDMxLTA4NDEg6Z2S5qOu55yM5YWr5oi45biC6a6r55S66J-75a2Q77yV4oiS77yR77yR!5e0!3m2!1sja!2sjp!4v1671948702823!5m2!1sja!2sjp" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -169,7 +171,7 @@ Api.fetchNewsIndex('drop_in_top').then((data) => {
       </section>
     </div>
     <div class="section">
-      <h2 class="text-center text-xl font-bold py-16">お知らせ</h2>
+      <h2 class="text-center text-2xl font-bold py-16">お知らせ</h2>
       <NewsList :newsList="news" :parentRoute="'space'"/>
       <div class="flex justify-center mt-10">
         <a href="/space/news" class="btn w-fit bg-teal-600 text-white px-6 py-3 text-sm">お知らせ一覧へ</a>

@@ -31,7 +31,7 @@ const things = [
 
 <template>
   <section class="section">
-    <h2 class="text-center text-slate-700 text-2xl font-bold py-16">管理人</h2>
+    <h2 class="text-center text-slate-700 text-3xl font-bold py-16">管理人</h2>
     <div class="flex justify-center items-center">
       <img src="/images/profile.png" class="w-5/12 sm:w-4/12 md:w-3/12"/>
       <div class="pl-8">
@@ -78,8 +78,8 @@ const things = [
     <h3 class="text-slate-700 text-xl text-center font-bold underline">やっていること</h3>
     <ul class="mt-16">
       <li v-for="(item, index) in things" :key="index" class="mb-10">
-        <a :href="item.link" class="">
-          <header class="inline-block text-lg font-bold border py-1 px-2 hover:shadow">{{ item.name }}</header>
+        <a :href="item.link">
+          <header class="bg-slate-100 inline-block text-lg font-bold border py-1 px-2 hover:shadow">{{ item.name }}</header>
         </a>
         <div class="mt-3">{{ item.description }}</div>
       </li>

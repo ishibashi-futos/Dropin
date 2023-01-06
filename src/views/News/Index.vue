@@ -14,7 +14,7 @@ Api.fetchNewsIndex(params).then((data) => {
 </script>
 <template>
   <div class="section">
-    <h2 class="text-center text-xl font-bold py-16">お知らせ</h2>
+    <h2 class="text-center text-3xl font-bold py-16">お知らせ</h2>
     <NewsList :newsList="news" :parentRoute="pathName"/>
   </div>
 </template>

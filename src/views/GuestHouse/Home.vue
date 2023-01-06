@@ -5,43 +5,47 @@ import NewsList from '../../components/NewsList.vue'
 
 const features = [
   { 
-    imageUrl: '/images/GH/kv.jpg',
+    imageUrl: '/images/GH/feature_01.jpg',
     title: "海まで徒歩10分"
   },
   { 
-    imageUrl: '/images/GH/kv.jpg',
+    imageUrl: '/images/GH/feature_02.jpg',
     title: "筋トレマシンあります"
   },
   { 
-    imageUrl: '/images/GH/kv.jpg',
+    imageUrl: '/images/GH/feature_03.jpg',
     title: "1日1組のみ"
   }
 ]
 const facilities = [
   { 
-    imageUrl: '/images/GH/kv.jpg',
+    imageUrl: '/images/GH/facility_01.jpg',
     title: "宿泊ルーム",
+    class: "facility_content_01",
     content: `宿泊用のお部屋は1つだけ（最大４名様）。
       疲れをゆっくり癒せるエママットレスのベッドを用意しています。
       `
   },
   { 
-    imageUrl: '/images/GH/kv.jpg',
+    imageUrl: '/images/GH/facility_02.jpg',
     title: "開発スペース",
-    content: `階の開発スペースにはモニタも用意しています。
+    class: "facility_content_02",
+    content: `2階の開発スペースにはモニタも用意しています。
     （開発スペースには時期によって宿泊のお客様以外のお客様が使用されている場合があります）
       `
   },
   { 
-    imageUrl: '/images/GH/kv.jpg',
+    imageUrl: '/images/GH/facility_03.jpg',
     title: "筋トレルーム",
+    class: "facility_content_01",
     content: `エンジニアには筋トレがつきもの。
       カラダとアタマを鍛えるための筋トレマシンのあるお部屋も自由にご利用いただけます。
       `
   },
   { 
-    imageUrl: '/images/GH/kv.jpg',
+    imageUrl: '/images/GH/facility_04.jpg',
     title: "バス＆アメニティ",
+    class: "facility_content_02",
     content: `宿泊ルームのある1階にお風呂とトイレがありますので、ご自由にご利用ください。
     `
   }
@@ -82,37 +86,19 @@ Api.fetchNewsIndex('guest_house_top').then((data) => {
       </ul>
     </section>
     <section ic="facilities">
-      <h2 class="text-center text-slate-700 text-2xl font-bold pt-16 sm:pb-16">施設案内</h2>
-      <div class="facility">
-        <div class="facility_content facility_content_01">
-          <h3 class="font-bold text-teal-600 text-lg facility_title">宿泊ルーム</h3>
-          <p class="text-base mt-4">
-            宿泊用のお部屋は1つだけ（最大４名様）。<br>
-            疲れをゆっくり癒せるエママットレスのベッドを用意しています。
-          </p>
-        </div>
-        <img src="/images/GH/facility_01.jpg" class="facility_img"/>
-      </div>
-      <div class="facility">
-        <div class="facility_content facility_content_02">
-          <h3 class="font-bold text-white text-lg facility_title">宿泊ルーム</h3>
-          <p class="text-white text-base mt-4">
-            宿泊用のお部屋は1つだけ（最大４名様）。<br>
-            疲れをゆっくり癒せるエママットレスのベッドを用意しています。
-          </p>
-        </div>
-        <img src="/images/GH/facility_02.jpg" class="facility_img"/>
-      </div>
-      <div class="facility">
-        <div class="facility_content facility_content_01">
-          <h3 class="font-bold text-teal-600 text-lg facility_title">宿泊ルーム</h3>
-          <p class="text-base mt-4">
-            宿泊用のお部屋は1つだけ（最大４名様）。<br>
-            疲れをゆっくり癒せるエママットレスのベッドを用意しています。
-          </p>
-        </div>
-        <img src="/images/GH/facility_03.jpg" class="facility_img"/>
-      </div>
+      <h2 class="text-slate-700 text-4xl text-center">ROOM</h2>
+      <p class="text-base text-slate-700　text-center">施設案内</p>
+      <ul class="sm:mt-16">
+        <li v-for="(facility, index) in facilities" :key="index" class="facility">
+          <div class="facility_content sm:w-6/12 md:w-5/12 lg:w-4/12 py-12 px-10" :class="facility.class">
+            <h3 class="font-bold text-lg facility_title">{{ facility.title }}</h3>
+            <p class="text-sm mt-4 whitespace-pre-line">
+              {{ facility.content }}
+            </p>
+          </div>
+          <img :src="facility.imageUrl" class="facility_img"/>
+        </li>
+      </ul>
     </section>
     <div class="section">
       <h2 class="text-center text-slate-700 text-2xl font-bold py-16">お知らせ</h2>
@@ -149,37 +135,36 @@ Api.fetchNewsIndex('guest_house_top').then((data) => {
   position: relative;
   overflow: hidden;
   width: 100%;
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+  }
   &_img {
-    width: 120%;
-    max-width: 120%;
+    width: 100%;
     height: auto;
     @media (min-width: 640px) {
       width: 100%;
     }
   }
   &_content {
-    padding: 35px 10%;
-    width: 100%;
     z-index: 2;
+    background-color: rgba(255, 255, 255, 0.8);
     @media (min-width: 640px) {
       position: absolute;
-      padding: 0 10%;
     }
     &_01 {
-      background-color: rgba(255,255,255,.5);
-      top: 80px;
       @media (min-width: 640px) {
-        top: 70px;
-        background-color: transparent;
+        left: 10%;
       }
     }
     &_02 {
-      background-color: rgba(0,0,0,.5);
-      top: 80px;
       @media (min-width: 640px) {
-        top: auto;
-        bottom: 50px;
-        background-color: transparent;
+        right: 10%;
       }
     }
   }
@@ -188,10 +173,10 @@ Api.fetchNewsIndex('guest_house_top').then((data) => {
     &::after {
       content: '';
       display: block;
-      width: 100%;
-      border-bottom: solid 1px var(--primary);
+      width: 80%;
+      border-bottom: solid 1px black;
       position: absolute;
-      left: 30%;
+      left: 50%;
       top: 50%;
     }
   }

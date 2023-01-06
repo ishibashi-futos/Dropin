@@ -6,6 +6,15 @@ import { ref } from 'vue'
   <section class="section mt-16">
     <h2 class="text-slate-700 text-4xl text-center">RESERVE</h2>
     <p class="text-base text-slate-700　text-center">ご予約</p>
+    <h3 class="text-center text-lg font-bold text-red-600">2023年3月頃オープン予定です。現在ご予約はいただけません。</h3>
+    <div class="text-center mt-16">
+      <span class="text-lg font-bold">料金:</span>
+      <span class="text-2xl font-bold">4,500</span>
+      <span class="text-sm font-bold">円(税込)</span>
+    </div>
+    <div class="text-center mt-1">
+      <span class="text-xs">お一人あたり / 一泊あたり / 最大4名様</span>
+    </div>
     <div class="bg-slate-200 px-10 py-6 mt-16">
       <h3 class="text-center text-lg font-bold text-slate-700 underline">ご予約の手順</h3>
       <ol class="mt-6">

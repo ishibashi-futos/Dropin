@@ -89,7 +89,7 @@ Api.fetchNewsIndex('guest_house_top').then((data) => {
       <h2 class="text-slate-700 text-4xl text-center">ROOM</h2>
       <p class="text-base text-slate-700　text-center">施設案内</p>
       <ul class="sm:mt-16">
-        <li v-for="(facility, index) in facilities" :key="index" class="facility">
+        <li v-for="(facility, index) in facilities" :key="index" class="facility mt-10">
           <div class="facility_content sm:w-6/12 md:w-5/12 lg:w-4/12 py-12 px-10" :class="facility.class">
             <h3 class="font-bold text-lg facility_title">{{ facility.title }}</h3>
             <p class="text-sm mt-4 whitespace-pre-line">
@@ -135,15 +135,6 @@ Api.fetchNewsIndex('guest_house_top').then((data) => {
   position: relative;
   overflow: hidden;
   width: 100%;
-  &::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    position: absolute;
-    bottom: 0;
-  }
   &_img {
     width: 100%;
     height: auto;

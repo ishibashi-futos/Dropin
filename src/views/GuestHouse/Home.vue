@@ -10,7 +10,7 @@ const features = [
   },
   { 
     imageUrl: '/images/GH/feature_02.jpg',
-    title: "筋トレマシンあります"
+    title: "筋トレ部屋あります"
   },
   { 
     imageUrl: '/images/GH/feature_03.jpg',
@@ -36,10 +36,10 @@ const facilities = [
   },
   { 
     imageUrl: '/images/GH/facility_03.jpg',
-    title: "筋トレルーム",
+    title: "筋トレ部屋",
     class: "facility_content_01",
     content: `エンジニアには筋トレがつきもの。
-      カラダとアタマを鍛えるための筋トレマシンのあるお部屋も自由にご利用いただけます。
+      カラダとアタマを鍛えるための筋トレグッズのあるお部屋も自由にご利用いただけます。
       `
   },
   { 

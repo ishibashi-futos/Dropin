@@ -128,7 +128,7 @@ Api.fetchNewsIndex('drop_in_top').then((data) => {
       <div class="text-lg mt-20">
         <dl>
           <dt class="font-bold text-center underline">対象</dt>
-          <dd class="font-bold text-center text-xl text-teal-600">学校に行っていない学生さん(概ね10代)</dd>
+          <dd class="font-bold text-center text-xl text-teal-600">学校が苦手、しんどい、行っていないけれど、将来の道を自分で探してみたい学生さん</dd>
         </dl>
         <dl>
           <dt class="font-bold text-center mt-6 underline">料金</dt>

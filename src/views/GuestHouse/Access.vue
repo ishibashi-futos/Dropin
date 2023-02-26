@@ -25,6 +25,7 @@ const gallary = [
     </div>
     <div class="md:flex mt-10">
       <div class="w-full md:w-4/12 pr-10">
+        <img src="/images/GH/view.jpg" class=""/>
         <p class="text-sm">031-0841</p>
         <p class="text-base">青森県八戸市鮫町蟻子5-11</p>
       </div>

@@ -2,7 +2,26 @@
 import { ref } from 'vue'
 import Api from '../../api/api.js'
 import NewsList from '../../components/NewsList.vue'
+import { Carousel, Navigation, Slide } from 'vue3-carousel'
+import 'vue3-carousel/dist/carousel.css'
 
+
+const settings = {
+  itemsToShow: 1,
+  snapAlign: 'start',
+}
+const breakpoints = {
+  // 700px and up
+  640: {
+    itemsToShow: 1.25,
+    snapAlign: 'start',
+  },
+  // 1024 and up
+  768: {
+    itemsToShow: 3,
+    snapAlign: 'center',
+  },
+}
 const features = [
   { 
     imageUrl: '/images/GH/feature_01.jpg',
@@ -10,7 +29,7 @@ const features = [
   },
   { 
     imageUrl: '/images/GH/feature_02.jpg',
-    title: "筋トレ部屋あります"
+    title: "音楽も楽しむ"
   },
   { 
     imageUrl: '/images/GH/feature_03.jpg',
@@ -20,34 +39,31 @@ const features = [
 const facilities = [
   { 
     imageUrl: '/images/GH/facility_01.jpg',
-    title: "宿泊ルーム",
+    title: "こだわりベッド",
     class: "facility_content_01",
     content: `宿泊用のお部屋は1つだけ（最大４名様）。
-      疲れをゆっくり癒せるエママットレスのベッドを用意しています。
+      疲れをゆっくり癒せるトゥルースリーパーのベッドを用意しています。
+      ※トゥルースリーパーは１台のみとなります。
       `
   },
   { 
     imageUrl: '/images/GH/facility_02.jpg',
-    title: "開発スペース",
+    title: "開発環境",
     class: "facility_content_02",
-    content: `2階の開発スペースにはモニタも用意しています。
-    （開発スペースには時期によって宿泊のお客様以外のお客様が使用されている場合があります）
-      `
-  },
-  { 
-    imageUrl: '/images/GH/facility_03.jpg',
-    title: "筋トレ部屋",
-    class: "facility_content_01",
-    content: `エンジニアには筋トレがつきもの。
-      カラダとアタマを鍛えるための筋トレグッズのあるお部屋も自由にご利用いただけます。
-      `
-  },
-  { 
-    imageUrl: '/images/GH/facility_04.jpg',
-    title: "バス＆アメニティ",
-    class: "facility_content_02",
-    content: `宿泊ルームのある1階にお風呂とトイレがありますので、ご自由にご利用ください。
+    content: `高速ひかりWifiを導入しております。ご自由にご利用ください。
+    疲れた時にはYogiboで一休み。
     `
+  },
+]
+const baths = [
+  { 
+    imageUrl: '/images/GH/bath_01.jpg',
+  },
+  { 
+    imageUrl: '/images/GH/bath_02.jpg',
+  },
+  { 
+    imageUrl: '/images/GH/wc.jpg',
   }
 ]
 const news = ref([]);
@@ -70,12 +86,26 @@ Api.fetchNewsIndex('guest_house_top').then((data) => {
     <section class="section mt-10">
       <h2 class="text-2xl text-center font-bold">Drop inは、開発合宿・ワーケーション特化型ゲストハウスです</h2>
       <p class="text-base mt-10">
-        何にも邪魔されず、目の前の作りたいものに没頭できる環境を目指しています。
-        開発用の作業ルームで作業するもよし、宿泊ルームで作業するもよし。
-        宿泊利用は1日1組様のためオンラインミーティングも可能です。(モニタやWiFiもご自由にご利用ください。）
+        何にも邪魔されず、目の前の作りたいものに没頭できる環境を目指しています。 
+        宿泊利用は1日1組様のためオンラインミーティングも可能です。(WiFiもご自由にご利用ください。）<br>
+        デジタルではないモノ作りも応援しています。なんでもご相談ください。
       </p>
-
-      <ul class="md:flex mt-20">
+      <ul class="mt-20 feature">
+        <Carousel :settings="settings" :breakpoints="breakpoints">
+          <Slide v-for="(feature, index) in features" :key="index">
+            <li>
+              <p class="text-center font-bold text-teal-600 text-base">
+                {{ feature.title }}
+              </p>
+              <img :src="feature.imageUrl" class="rounded-full aspect-square mt-5 md:p-2" />
+            </li>
+          </Slide>
+          <template #addons>
+            <Navigation />
+          </template>
+        </Carousel>
+      </ul>
+      <!-- <ul class="md:flex mt-20">
         <li v-for="(feature, index) in features" :key="index" 
           class="px-12 mt-12 sm:px-20 md:mt-0 md:flex-1 md:px-1">
           <p class="text-center font-bold text-teal-600 text-base">
@@ -83,11 +113,11 @@ Api.fetchNewsIndex('guest_house_top').then((data) => {
           </p>
           <img :src="feature.imageUrl" class="rounded-full aspect-square mt-5 md:p-2" />
         </li>
-      </ul>
+      </ul> -->
     </section>
-    <section ic="facilities">
+    <section id="facilities">
       <h2 class="text-slate-700 text-4xl text-center">ROOM</h2>
-      <p class="text-base text-slate-700　text-center">施設案内</p>
+      <p class="text-base text-slate-700　text-center">宿泊ルーム</p>
       <ul class="sm:mt-16">
         <li v-for="(facility, index) in facilities" :key="index" class="facility mt-10">
           <div class="facility_content sm:w-6/12 md:w-5/12 lg:w-4/12 py-12 px-10" :class="facility.class">
@@ -99,6 +129,27 @@ Api.fetchNewsIndex('guest_house_top').then((data) => {
           <img :src="facility.imageUrl" class="facility_img"/>
         </li>
       </ul>
+    </section>
+    <section class="section mt-20">
+      <h2 class="text-slate-700 text-4xl text-center">Bath & Amenities</h2>
+      <p class="text-base text-slate-700　text-center">バス&アメニティ</p>
+      <p class="text-base mt-10">
+        何にも邪魔されず、目の前の作りたいものに没頭できる環境を目指しています。
+        開発用の作業ルームで作業するもよし、宿泊ルームで作業するもよし。
+        宿泊利用は1日1組様のためオンラインミーティングも可能です。(WiFiもご自由にご利用ください。）
+      </p>
+      <div class="mt-16">
+        <Carousel :settings="settings" :breakpoints="breakpoints">
+          <Slide v-for="(item, index) in baths" :key="index">
+            <div class="carousel__item">
+              <img :src="item.imageUrl" class="aspect-square" />
+            </div>
+          </Slide>
+          <template #addons>
+            <Navigation />
+          </template>
+        </Carousel>
+      </div>
     </section>
     <div class="section">
       <h2 class="text-center text-slate-700 text-2xl font-bold py-16">お知らせ</h2>
@@ -171,5 +222,8 @@ Api.fetchNewsIndex('guest_house_top').then((data) => {
       top: 50%;
     }
   }
+}
+.feature ::v-deep .carousel__icon {
+  fill: white;
 }
 </style>

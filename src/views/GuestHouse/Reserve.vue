@@ -6,7 +6,7 @@ import { ref } from 'vue'
   <section class="section mt-16">
     <h2 class="text-slate-700 text-4xl text-center">RESERVE</h2>
     <p class="text-base text-slate-700　text-center">ご予約</p>
-    <h3 class="text-center text-lg font-bold text-red-600">2023年3月頃オープン予定です。現在ご予約はいただけません。</h3>
+    <h3 class="text-center text-lg font-bold text-red-600">2023年3月下旬頃オープン予定です。現在ご予約はいただけません。</h3>
     <div class="text-center mt-16">
       <span class="text-xs font-bold text-red-500">オープン記念価格</span><br>
       <span class="text-lg font-bold">料金:</span>

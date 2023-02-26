@@ -134,9 +134,8 @@ Api.fetchNewsIndex('guest_house_top').then((data) => {
       <h2 class="text-slate-700 text-4xl text-center">Bath & Amenities</h2>
       <p class="text-base text-slate-700　text-center">バス&アメニティ</p>
       <p class="text-base mt-10">
-        何にも邪魔されず、目の前の作りたいものに没頭できる環境を目指しています。
-        開発用の作業ルームで作業するもよし、宿泊ルームで作業するもよし。
-        宿泊利用は1日1組様のためオンラインミーティングも可能です。(WiFiもご自由にご利用ください。）
+        お風呂・お手洗いはリフォーム済みで新品です。宿泊ルームと同じ一階にございますので、ご自由にご利用ください。<br>
+        シャンプー・コンディショナー・化粧水等はトラベルセットをご用意しております。
       </p>
       <div class="mt-16">
         <Carousel :settings="settings" :breakpoints="breakpoints">

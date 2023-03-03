@@ -66,7 +66,7 @@ const footerMenuList = ref([
     title: "Drop inの他のこと",
     itemList: [
       {
-        name: "湊のゲストハウスDrop in",
+        name: "鮫のゲストハウスDrop in",
         link: "/guest_house",
       },
       {

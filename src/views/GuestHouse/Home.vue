@@ -135,8 +135,11 @@ Api.fetchNewsIndex('guest_house_top').then((data) => {
       <p class="text-base text-slate-700　text-center">バス&アメニティ</p>
       <p class="text-base mt-10">
         お風呂・お手洗いはリフォーム済みで新品です。宿泊ルームと同じ一階にございますので、ご自由にご利用ください。<br>
-        シャンプー・コンディショナー・化粧水等はトラベルセットをご用意しております。
       </p>
+      <div class="text-sm mt-8">
+        <p class="font-bold">ご用意のあるアメニティ</p>
+        <p>シャンプー / コンディショナー / ボディーソープ / 化粧水 /ドライヤー/ ミニヘアアイロン / 歯ブラシ</p>
+      </div>
       <div class="mt-16">
         <Carousel :settings="settings" :breakpoints="breakpoints">
           <Slide v-for="(item, index) in baths" :key="index">

@@ -10,7 +10,7 @@ const things = [
     `
   },
   {
-    name: "湊のゲストハウス Drop in",
+    name: "鮫のゲストハウス Drop in",
     link: "/guest_house",
     description: `
       八戸市鮫町の自宅をゲストハウスとして運営しています。

@@ -124,11 +124,13 @@ Api.fetchNewsIndex('drop_in_top').then((data) => {
     <section class="section pt-20" id="join">
       <h2 class="font-pixel text-slate-500 text-4xl text-center">JOIN!</h2>
       <p class="text-base text-slate-500　text-center">どうやって参加するの？</p>
-      <h3 class="text-center text-lg font-bold text-red-600 mt-6">2023年3月頃活動開始予定です。現在お問い合わせのみ受け付けております。</h3>
+      <!-- <h3 class="text-center text-lg font-bold text-red-600 mt-6">2023年3月頃活動開始予定です。現在お問い合わせのみ受け付けております。</h3> -->
       <div class="text-lg mt-20">
         <dl>
           <dt class="font-bold text-center underline">対象</dt>
-          <dd class="font-bold text-center text-xl text-teal-600">学校が苦手、しんどい、行っていないけれど、将来の道を自分で探してみたい学生さん</dd>
+          <dd class="font-bold text-center text-xl text-teal-600">
+            学校に行っていない。行っているけど学校が苦手、しんどい。<br>でも将来の道を自分で探してみたい学生さん
+          </dd>
         </dl>
         <dl>
           <dt class="font-bold text-center mt-6 underline">料金</dt>
@@ -151,6 +153,7 @@ Api.fetchNewsIndex('drop_in_top').then((data) => {
         <p class="text-base text-slate-500　text-center">どこにある？</p>
         <div class="md:flex mt-10">
           <div class="pr-10  md:w-4/12">
+            <img src="/images/GH/view.jpg"/>
             <p class="text-sm">031-0841</p>
             <p class="text-base">青森県八戸市鮫町蟻子5-11</p>
             <p class="text-base">鮫のゲストハウスDrop in内</p>

@@ -6,10 +6,10 @@ import { ref } from 'vue'
   <section class="section mt-16">
     <h2 class="text-slate-700 text-4xl text-center">RESERVE</h2>
     <p class="text-base text-slate-700　text-center">ご予約</p>
-    <h3 class="text-center text-lg font-bold text-red-600 mt-8">準備が完全には整っていませんが、モニター価格でご案内しておりますm(_ _)m</h3>
+    <h3 class="text-center text-lg font-bold text-red-600 mt-8">準備が完全には整っていませんが、3月末までモニター価格でご案内しておりますm(_ _)m</h3>
     <p class="text-center text-sm font-bold mt-8">
       宿泊にあたって不備や不都合があった場合はその都度対応させていたきます。<br>
-      準備が整いましたら、価格は変更させていただく予定です。
+      準備が整いましたら、4月以降価格は変更させていただく予定です。
     </p>
     <div class="text-center mt-16">
       <span class="text-xs font-bold text-red-500">モニター価格</span><br>

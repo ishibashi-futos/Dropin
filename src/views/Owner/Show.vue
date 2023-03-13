@@ -4,9 +4,10 @@ const things = [
     name: "Drop in",
     link: "/space",
     description: `
-      不登校や引きこもりで時間が余っている方と一緒にCreateしたい！と思って立ち上げた団体です。
+      不登校だったり学校が苦手な方と一緒にCreateしたい！と思って立ち上げた、
+      「学校だけじゃない選択肢を考えるコミュニティ」です。
       八戸市の施設はっちと組んでインターン事業を実施したこともありました。
-      現在は学校に行っていない時間を楽しい時間にしよう！ということ興味を見つけるお手伝いの場を運営しています。
+      現在は学校に行っていない時間を楽しい時間にしよう！ということで、興味を見つけたり極めたりするお手伝いの場を運営しています。
     `
   },
   {
@@ -27,6 +28,22 @@ const things = [
     `
   },
 ];
+
+const snsList = [
+  {
+    name: "color_twitter",
+    link: "https://twitter.com/Bassy3600",
+  },
+  {
+    name: "color_facebook",
+    link: "https://www.facebook.com/yuuki.ishibashy",
+  },
+  {
+    name: "color_instagram",
+    link: "https://www.instagram.com/ishibashyyy",
+  },
+]
+
 </script>
 
 <template>
@@ -38,7 +55,14 @@ const things = [
         <p class="font-bold sm:text-lg text-base">石橋優希</p>
         <p class="text-sm sm:text-base">青森県八戸市出身</p>
         <p class="text-sm sm:text-base">現在は八戸と神奈川県藤沢市の二拠点</p>
-      </div>
+        <ul class="flex">
+          <li v-for="sns in snsList" class="flex frex-col items-center mt-8">
+            <a :href="sns.link" target="_blank">
+              <img :src="`/images/sns/icon_${sns.name}.png`" class="w-12 px-1"/>
+            </a>
+          </li>
+        </ul>
+        </div>
     </div>
   </section>
   <div class="bg-slate-100">

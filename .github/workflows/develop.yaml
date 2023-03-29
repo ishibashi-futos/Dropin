@@ -2,11 +2,12 @@ name: Build website
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      branches-ignore: [ main ]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [macOS-latest, ubuntu-latest]
@@ -14,16 +15,11 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
-    - name: Use Node.js 18.x
+    - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
-        node-version: 18.x
+        node-version: ${{ matrix.node-version }}
     - name: Install Dependencies
       run: npm install
     - name: Build
       run: npm run build
-    - name: Archive Artifacts
-      uses: actions/upload-artifact@v2
-      with:
-        name: dist
-        path: dist
